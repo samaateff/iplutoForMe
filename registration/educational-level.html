@@ -1,0 +1,173 @@
+
+<!--
+project     : I Pluto Student
+made by     : Creative Minds
+website     : https://cems-it.com
+Expiry date : 
+-->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Always force latest IE rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Site description -->
+    <meta name="description" content="مدرسين متخصصين في كافة المواد الدراسية">
+    <!-- Site Title -->
+    <title>اي بلوتو - اختر المرحلة الدراسية</title>
+    <!-- Site FavIcon -->
+    <link rel="icon" href="/iplulo-student/favicon.webp">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="/iplulo-student/assets/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/iplulo-student/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/iplulo-student/assets/css/bootstrap.rtl.min.css">
+    <!-- swiper js-->
+    <link rel="stylesheet" href="/iplulo-student/assets/css/swiper.css">
+    <!-- Custom Stylesheet-->
+    <link rel="stylesheet" href="/iplulo-student/assets/css/style.css">
+  </head>
+  <body>
+    <!-- Start Header-->
+    <header id="header">
+      <div class="container-lg">
+        <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="/iplulo-student/"><img src="/iplulo-student/assets/images/ipluto-logo.webp"></a><a class="user-info d-lg-none" href="/iplulo-student/student/profile-setting.html">
+            <div class="avater"><img src="/iplulo-student/assets/images/student-avatar.webp" alt="user avater"></div>
+            <div class="info d-none d-lg-block"><span class="welcome">مرحبا بك</span>
+              <h3 class="name">محمد ياسر صلاح حسين</h3>
+              <p class="data">الصف الثالث الثانوي ( علمي علوم ) </p>
+            </div></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarHeader" aria-controls="navbarHeader"><i class="fa-solid fa-bars"></i></button>
+          <div class="offcanvas offcanvas-start" id="navbarHeader">
+            <div class="offcanvas-header"><a class="navbar-brand" href="/iplulo-student/"><img src="/iplulo-student/assets/images/ipluto-logo.webp"></a>
+              <button class="close-button" data-bs-dismiss="offcanvas" aria-label="Close" type="button"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="/iplulo-student/">الرئيسية</a></li>
+              <li class="nav-item"><a class="nav-link" href="/iplulo-student/teachers.html">المدرسين</a></li>
+              <li class="nav-item"><a class="nav-link" href="/iplulo-student/registration/sign-in.html">دروسي</a></li>
+              <li class="nav-item"><a class="nav-link" href="/iplulo-student/registration/sign-in.html">مواعيدي</a></li>
+              <li class="nav-item"><a class="nav-link" href="/iplulo-student/registration/sign-in.html">الملازم</a></li>
+              <li class="nav-item"><a class="nav-link" href="/iplulo-student/contact-us.html">تواصل معنا</a></li>
+              <li class="nav-item"><a class="nav-link lang" href="/iplulo-student/en"> <img src="/iplulo-student/assets/images/icons/en-flag.svg" alt="English flag"><span>English</span></a></li>
+            </ul>
+            <div class="dropdown main-select"> 
+              <button class="user-info d-none d-lg-flex" type="button" data-bs-toggle="dropdown">
+                <div class="avater"><img src="/iplulo-student/assets/images/student-avatar.webp" alt="user avater"></div>
+                <div class="info d-none d-lg-block text-start"><span class="welcome">مرحبا بك</span>
+                  <h3 class="name">محمد ياسر صلاح حسين</h3>
+                  <p class="data">الصف الثالث الثانوي ( علمي علوم ) </p>
+                </div>
+              </button>
+              <ul class="dropdown-menu">
+                <li> <a class="dropdown-item" href="/iplulo-student/student/profile-setting.html">حسابي</a></li>
+                <li> <a class="dropdown-item logout" href="/iplulo-student/">تسجيل الخروج</a></li>
+              </ul>
+            </div><a class="logout d-flex d-lg-none px-3 py-2" href="/iplulo-student/">تسجيل الخروج
+              <div class="icon"><i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i></div></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+    <div id="content">
+      <!-- Start registration section-->
+      <section class="registration-section">
+        <div class="container-lg">
+          <article class="registration-box">
+            <h1 class="register-title">اختر المرحلة الدراسية </h1>
+            <form class="register-form needs-validation" action="" novalidate>
+              <div class="custom-select dropdown">
+                <label>المرحلة الدراسية</label>
+                <input id="educational_level" type="hidden" name="educational_level">
+                <button class="input-button" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>اختر المرحلة الدراسية </span><i class="fa-solid fa-chevron-down"></i></button>
+                <ul class="dropdown-menu"><a class="dropdown-item" data-select-value="secondary-school-2" href="#">الصف الثاني الثانوي ( علمي - علوم )</a><a class="dropdown-item" data-select-value="secondary-school-2" href="#">الصف الثاني الثانوي ( علمي - علوم )</a><a class="dropdown-item" data-select-value="secondary-school-2" href="#">الصف الثاني الثانوي ( علمي - علوم )</a><a class="dropdown-item" data-select-value="secondary-school-2" href="#">الصف الثاني الثانوي ( علمي - علوم )</a><a class="dropdown-item" data-select-value="secondary-school-2" href="#">الصف الثاني الثانوي ( علمي - علوم )</a><a class="dropdown-item" data-select-value="secondary-school-2" href="#">الصف الثاني الثانوي ( علمي - علوم )</a>
+                </ul><span class="invalid-feedback">الرجاء اختيار مرحلة دراسية.</span>
+              </div>
+              <!-- button.submit(type="submit") التالي-->
+              <button class="submit" type="button" data-bs-toggle="modal" data-bs-target="#invitation_code">التالي</button>
+            </form>
+          </article>
+        </div>
+      </section>
+      <!-- End registration section-->
+      <!-- Modal => operation invitation code-->
+      <section class="main-popup modal fade" id="invitation_code" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <section class="modal-header">
+              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            </section>
+            <section class="modal-body">
+              <form class="register-form needs-validation" action="" novalidate>
+                <section class="register-heading"> 
+                  <div class="icon"><img src="/iplulo-student/assets/images/icons/message-code.svg" alt="كود التحقق"></div>
+                  <h2 class="heading">هل لديك كود دعوة من المدرس الخاص بك !</h2>
+                </section>
+                <div class="invitation-field">
+                  <div class="input-field">
+                    <input class="form-control" id="invitation_code_teaher" type="text" minlength="10" maxlength="20" name="invitation_code_teaher" required placeholder="اكتب كود الدعوة"><span class="invalid-feedback">الرجاء كتابة كود دعوة صحيح.</span><span class="icon">
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.18014 22.7499C6.08014 22.7499 5.97014 22.7399 5.88014 22.7299L3.71014 22.4299C2.67014 22.2899 1.73014 21.3599 1.57014 20.2999L1.27014 18.1099C1.17014 17.4099 1.47014 16.4999 1.97014 15.9899L6.36014 11.5999C5.65014 8.75992 6.47014 5.75992 8.56014 3.68992C11.8001 0.459923 17.0701 0.449923 20.3201 3.68992C21.8901 5.25992 22.7501 7.34992 22.7501 9.56992C22.7501 11.7899 21.8901 13.8799 20.3201 15.4499C18.2201 17.5299 15.2301 18.3499 12.4101 17.6299L8.01014 22.0199C7.59014 22.4599 6.84014 22.7499 6.18014 22.7499ZM14.4301 2.75992C12.6801 2.75992 10.9401 3.41992 9.61014 4.74992C7.81014 6.53992 7.16014 9.15992 7.91014 11.5999C7.99014 11.8699 7.92014 12.1499 7.72014 12.3499L3.02014 17.0499C2.85014 17.2199 2.71014 17.6599 2.74014 17.8899L3.04014 20.0799C3.10014 20.4599 3.51014 20.8899 3.89014 20.9399L6.07014 21.2399C6.31014 21.2799 6.75014 21.1399 6.92014 20.9699L11.6401 16.2599C11.8401 16.0599 12.1301 15.9999 12.3901 16.0799C14.8001 16.8399 17.4301 16.1899 19.2301 14.3899C20.5101 13.1099 21.2201 11.3899 21.2201 9.56992C21.2201 7.73992 20.5101 6.02992 19.2301 4.74992C17.9301 3.42992 16.1801 2.75992 14.4301 2.75992Z" fill="#A3A3A3"/><path d="M9.19008 20.5402C9.00008 20.5402 8.81008 20.4702 8.66008 20.3202L6.36008 18.0202C6.07008 17.7302 6.07008 17.2502 6.36008 16.9602C6.65008 16.6702 7.13008 16.6702 7.42008 16.9602L9.72008 19.2602C10.0101 19.5502 10.0101 20.0302 9.72008 20.3202C9.57008 20.4702 9.38008 20.5402 9.19008 20.5402Z" fill="#A3A3A3"/><path d="M14.5 11.75C13.26 11.75 12.25 10.74 12.25 9.5C12.25 8.26 13.26 7.25 14.5 7.25C15.74 7.25 16.75 8.26 16.75 9.5C16.75 10.74 15.74 11.75 14.5 11.75ZM14.5 8.75C14.09 8.75 13.75 9.09 13.75 9.5C13.75 9.91 14.09 10.25 14.5 10.25C14.91 10.25 15.25 9.91 15.25 9.5C15.25 9.09 14.91 8.75 14.5 8.75Z" fill="#A3A3A3"/></svg></span>
+                  </div>
+                  <!-- class accepts success and erorr :  for use if the invitation code is true or false-->
+                  <div class="invitation-icon"><i class="fa-regular fa-circle-check"></i></div>
+                </div>
+                <div class="sign-buttons justify-content-center">
+                  <button class="submit mx-0" type="submit">دخول</button><a class="skip mx-0" href="#">تخطي</a>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- start Footer-->
+    <footer id="footer">
+      <div class="container-lg">
+        <article> 
+          <figure class="image"> <img src="/iplulo-student/assets/images/footer-logo.webp" alt="ipluto logo"></figure>
+        </article>
+        <article> 
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/iplulo-student/">الرئيسية</a></li>
+            <li class="nav-item"><a class="nav-link" href="/iplulo-student/teachers.html">المدرسين</a></li>
+            <li class="nav-item"><a class="nav-link" href="/iplulo-student/registration/sign-in.html">دروسي</a></li>
+            <li class="nav-item"><a class="nav-link" href="/iplulo-student/registration/sign-in.html">مواعيدي</a></li>
+            <li class="nav-item"><a class="nav-link" href="/iplulo-student/registration/sign-in.html">الملازم</a></li>
+            <li class="nav-item"><a class="nav-link" href="/iplulo-student/contact-us.html">تواصل معنا</a></li>
+            <li class="nav-item"><a class="nav-link lang" href="/iplulo-student/en"> <img src="/iplulo-student/assets/images/icons/en-flag.svg" alt="English flag"><span>English</span></a></li>
+          </ul>
+          <article class="footer-box">
+            <ul class="social-footer">
+              <li><a class="link" href="https://twitter.com/" target="_blank"> <i class="fa-brands fa-x-twitter"></i></a></li>
+              <li><a class="link" href="https://www.linkedin.com/" target="_blank"> <i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a class="link" href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook-f"></i></a></li>
+            </ul>
+            <ul class="sign-buttons"> 
+              <li><a class="main-button" href="/iplulo-student/registration/teacher-sign.html">مدرس, سجل حسابك الان</a></li>
+              <li><a class="second-button" href="/iplulo-student/registration/sign-up.html">سجل حساب جديد</a></li>
+            </ul>
+            <p class="copywrite">جميع الحقوق محفوظة لمنصة <a href="/iplulo-student/"> اي-بلوتو</a> التعليمية 2023</p>
+          </article>
+        </article>
+      </div>
+    </footer>
+    <!-- End Footer-->
+    <!-- Fontawesome -->
+    <script src="/iplulo-student/assets/js/all.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="/iplulo-student/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper js-->
+    <script src="/iplulo-student/assets/js/swiper.js"></script>
+    <!-- sweetalert2-->
+    <script src="/iplulo-student/assets/js/sweetalert2.min.js"></script>
+    <!-- jquery in order to daterangepicker-->
+    <script src="/iplulo-student/assets/js/jquery.min.js"></script>
+    <!-- Custom script-->
+    <script src="/iplulo-student/assets/js/main.js"></script>
+    <script src="/iplulo-student/assets/js/custom.js"></script>
+  </body>
+</html>

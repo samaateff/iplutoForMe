@@ -1,0 +1,34 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "payment-settings"
+    let pageTitle       = "المعلم - اعدادات الدفع الألكتروني"
+
+
+//- content This page
+block teacherContent
+  // Start profile heading section
+  section.profile-heading
+    .student-heading.mb-3
+      h1.heading.text-center الاعدادات
+    .student-heading 
+      h2.heading.text-center 
+        span.special اعدادات الدفع الخاصة بك
+  // End profile heading section
+  // Start profile change data section
+  section.profile-change-data
+    h2.profile-heading اعدادات الحساب البنكي الخاص بك
+    form.register-form.needs-validation(action="", novalidate)
+      label.profile-label(for="user_account_number")  رقم الحساب البنكي
+      section.input-field.profile-field
+        input.form-control#user_account_number(type="number", minlength ="16", maxlength="16", pattern="\d*", name="user_account_number", required, placeholder="رقم الحساب البنكي")
+        span.invalid-feedback الرجاء كتابة رقم حساب بنكي صالح.
+      label.profile-label(for="user_account_ccv") رقم ال CCV
+      section.input-field.password.profile-field
+        input.form-control#user_account_ccv(type="password", minlength ="3", maxlength="3", name="user_account_ccv", pattern="\d*", required, placeholder="رقم ال CCV")
+        span.invalid-feedback الرجاء كتابة رقم ccv صالح
+        span.eye #[i.fa-solid.fa-eye]
+      button.submit.mt-4(type="submit") حفظ
+  // End profile change data section

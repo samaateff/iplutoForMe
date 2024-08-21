@@ -1,0 +1,61 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "notifications"
+    let pageTitle       = "المعلم - الاشعارات"
+
+
+//- content This page
+block teacherContent
+  // Start profile heading section
+  section.profile-heading
+    .student-heading 
+      h1.heading.text-center الاشعارت
+  // End profile heading section
+  // Start profile heading section
+  section.notifications
+    ul
+      li.notification-item 
+        .image 
+          img(src=`${siteDomin}/assets/images/teacher-info.webp`, alt="notification image")
+        .box-between 
+          section.content 
+            p.text وافق الطالب ( #[a(href=`${siteDomin}/teacher/student.html`) ابراهيم علي احمد] ) علي طلب الانضمام الي المجموعة الخاصة بك ( #[a(href="#") الكمياء العضوية - مجموعه يوم السبت] )
+            span.date 05:20 PM
+      li.notification-item 
+        .image 
+          img(src=`${siteDomin}/assets/images/teacher-info.webp`, alt="notification image")
+        .box-between 
+          section.content 
+            p.text تم خصم #[span.delete -20 ] جنية ( عمولة تحويل الي حسابك البنكي ) 
+            span.date 05:20 PM
+      li.notification-item 
+        .image 
+          img(src=`${siteDomin}/assets/images/teacher-info.webp`, alt="notification image")
+        .box-between 
+          section.content 
+            p.text تم شحن محفظتك بقيمة #[span.add 500+ ] جنية
+            span.date 05:20 PM
+      li.notification-item 
+        .image 
+          img(src=`${siteDomin}/assets/images/teacher-info.webp`, alt="notification image")
+        .box-between 
+          section.content 
+            p.text وافق الطالب ( #[a(href=`${siteDomin}/teacher/student.html`) ابراهيم خليل علي ] ) علي كود الاضافة الي المجموعة الخاصة بك ( #[a(href="#") اللغة العربية - الصف الثالث الثانوي ] )
+            span.date 05:20 PM
+          a.notification-button(href=`${siteDomin}/teacher/addition-codes.html`) اكواد الاضافة
+      li.notification-item 
+        .image 
+          img(src=`${siteDomin}/assets/images/teacher-info.webp`, alt="notification image")
+        .box-between 
+          section.content 
+            p.text قام الطالب ( #[a(href=`${siteDomin}/teacher/student.html`) ابراهيم خليل علي ] ) بشراء الدرس الثاني من الوحدة الاولي ( #[a(href="#") للكمياء العضوية ] )
+            span.date 05:20 PM
+          a.notification-button(href=`${siteDomin}/teacher/lesson.html`) عرض الحصة
+    // If there are no notifications, show this section
+    // .notifications-empty
+      img(src=`${siteDomin}/assets/images/notifications-empty.svg`, alt="notifications empty")
+      h3.heading لا توجد اي اشعارات حتي الان
+  // End profile heading section

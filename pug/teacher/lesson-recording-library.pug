@@ -1,0 +1,73 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "lesson-recording"
+    let pageTitle       = "المعلم - تسجيل الدرس"
+
+//- content This page
+block teacherContent
+  // Start teacher heading section
+  section.teacher-heading.mb-3
+    .heading-box
+      h1.heading.text-center مادة الرياضيات
+      p.description.text-center الصف الاول الثانوي
+  section.teacher-heading
+    a.add-teaching(href=`${siteDomin}/teacher/add-materials-library.html`)
+      i.fa-solid.fa-plus
+      span اضافة ملف جديد
+    h2.heading.text-center #[span.red-color تسجيل] الدرس الثاني - العلاقات وتمثيلها بيانيا
+    a.back-home(href=`${siteDomin}/teacher/chapter-lessons.html`) 
+      span رجوع
+      i.fa-solid.fa-arrow-left-long
+  // End teacher heading section
+  // Start materials library section
+  section#materials_library.materials-library.accordion
+    h2.lesson-recording-heading مكتبة المواد المساعدة لك في الشرح
+    ul.library-taps 
+      li
+        button#library_tap_1.tap-item.collapsed(type="button", data-bs-toggle="collapse" data-bs-target="#library_material_1" aria-expanded="true" aria-controls="library_material_1") ملفات
+      li
+        button#library_tap_2.tap-item(type="button", data-bs-toggle="collapse" data-bs-target="#library_material_2" aria-expanded="false" aria-controls="library_material_2") صور
+      li
+        button#library_tap_3.tap-item.collapsed(type="button", data-bs-toggle="collapse" data-bs-target="#library_material_3" aria-expanded="false" aria-controls="library_material_3") فيديوهات
+    article.materials
+      section#library_material_1.accordion-collapse.collapse(data-bs-parent="#materials_library")
+        ul.materials-files
+          - for(let i = 1; i <= 5; i++)
+            li
+              .file-item
+                input.form-check-input(type="checkbox", name="")
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H14C14.41 1.25 14.75 1.59 14.75 2C14.75 2.41 14.41 2.75 14 2.75H9C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V10C21.25 9.59 21.59 9.25 22 9.25C22.41 9.25 22.75 9.59 22.75 10V15C22.75 20.43 20.43 22.75 15 22.75Z" fill="#06D9C8"/><path d="M22 10.75H18C14.58 10.75 13.25 9.41999 13.25 5.99999V1.99999C13.25 1.69999 13.43 1.41999 13.71 1.30999C13.99 1.18999 14.31 1.25999 14.53 1.46999L22.53 9.46999C22.74 9.67999 22.81 10.01 22.69 10.29C22.57 10.57 22.3 10.75 22 10.75ZM14.75 3.80999V5.99999C14.75 8.57999 15.42 9.24999 18 9.24999H20.19L14.75 3.80999Z" fill="#06D9C8"/></svg>
+                span اسم الملف يكتب هنا.PDF
+      section#library_material_2.accordion-collapse.collapse.show(data-bs-parent="#materials_library")
+        .materials-library-box
+          - for(let i = 1; i <= 5; i++)
+            figure.image
+              img(src=`${siteDomin}/assets/images/library-image.webp`, alt="library image")
+              span.library-badge بواسطتك
+              input.form-check-input.lebrary-checkbox(type="checkbox", name="")
+      section#library_material_3.accordion-collapse.collapse(data-bs-parent="#materials_library")
+        .materials-library-box
+          - for(let i = 1; i <= 5; i++)
+            figure.video(data-bs-target="#library_video_popup", data-bs-toggle="modal")
+              img(src=`${siteDomin}/assets/images/library-image.webp`, alt="library image")
+              span.library-badge بواسطتك
+              input.form-check-input.lebrary-checkbox(type="checkbox", name="")
+        // Modal => operation success
+        section.main-popup.video-popup#library_video_popup.modal.fade(tabindex="-1" aria-hidden="true")
+          .modal-dialog.modal-dialog-centered
+            .modal-content
+              section.modal-header
+                button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+                  i.fa-solid.fa-xmark
+              section.modal-body
+                video(src=`${siteDomin}/assets/images/teacher-video.mp4` controls poster=`${siteDomin}/assets/images/footer-logo.webp`) 
+  // End materials library section
+  // Start start recording section
+  section.mt-4.mt-sm-5
+    a.start-recording(href=`${siteDomin}/teacher/lesson-recording-options.html`) 
+      span بدأ التسجيل
+      <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0467 17.3829H18.6225C22.4683 17.3829 23.8333 15.3079 23.8333 13.3745V6.62454C23.8333 3.74121 22.3708 2.61621 18.6225 2.61621H12.0467C8.29833 2.61621 6.83583 3.74121 6.83583 6.62454V13.3745C6.83583 16.2579 8.29833 17.3829 12.0467 17.3829ZM18.6225 3.88288C21.45 3.88288 22.1867 4.44954 22.1867 6.62454V13.3745C22.1867 14.3995 21.7208 16.1162 18.6225 16.1162H12.0467C9.21916 16.1162 8.48249 15.5495 8.48249 13.3745V6.62454C8.48249 4.44954 9.21916 3.88288 12.0467 3.88288H18.6225Z" fill="#040349"/><path d="M3.48841 15.0921C3.95424 15.0921 4.55007 14.9754 5.23257 14.6087L8.12507 13.0504C8.34174 12.9337 8.47174 12.7421 8.47174 12.5337V7.46707C8.47174 7.25874 8.34174 7.06707 8.12507 6.9504L5.23257 5.39207C3.94341 4.7004 3.00091 4.9004 2.55674 5.0754C2.11258 5.25874 1.35424 5.73374 1.35424 6.94207V13.0504C1.35424 14.2587 2.11258 14.7421 2.55674 14.9171C2.76257 15.0087 3.08757 15.0921 3.48841 15.0921ZM6.83591 12.2004L4.29007 13.5671C3.80257 13.8254 3.45591 13.8504 3.31507 13.7921C3.16341 13.7337 3.00091 13.5004 3.00091 13.0504V6.9504C3.00091 6.49207 3.17424 6.26707 3.31507 6.20874C3.45591 6.1504 3.80257 6.1754 4.29007 6.43374L6.83591 7.8004V12.2004Z" fill="#040349"/><path d="M13.5417 9.79199C14.885 9.79199 15.9792 8.95033 15.9792 7.91699C15.9792 6.88366 14.885 6.04199 13.5417 6.04199C12.1983 6.04199 11.1042 6.88366 11.1042 7.91699C11.1042 8.95033 12.1983 9.79199 13.5417 9.79199ZM13.5417 7.29199C13.9858 7.29199 14.3542 7.57533 14.3542 7.91699C14.3542 8.25866 13.9858 8.54199 13.5417 8.54199C13.0975 8.54199 12.7292 8.25866 12.7292 7.91699C12.7292 7.57533 13.0975 7.29199 13.5417 7.29199Z" fill="#040349"/></svg>
+  // End start recording section

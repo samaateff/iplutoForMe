@@ -1,0 +1,32 @@
+extends layout
+include components/mixins
+
+append variable
+  - 
+    let page            = "contact-us"
+    let pageTitle       = "اي بلوتو - تواصل معنا"
+
+//- content This page
+block pageContent
+  // Start teacher contact section
+  section.student-contact.main-space.mb-0
+    .container-lg 
+      .student-heading 
+        h1.heading.text-center تواصل معنا
+      ul.student-option.bg-white.shadow-sm 
+        li 
+          a.method-link(href=`${siteDomin}/about-us.html`) من نحن
+            i.fa-solid.fa-chevron-left
+        li 
+          a.method-link(href=`${siteDomin}/questions.html`) الاسئلة الشائعة
+            i.fa-solid.fa-chevron-left
+        li 
+          a.method-link(href=`${siteDomin}/terms-conditions.html`) الشروط والاحكام
+            i.fa-solid.fa-chevron-left
+        li 
+          a.method-link(href=`${siteDomin}/privacy-policy.html`) سياسة الخصوصية
+            i.fa-solid.fa-chevron-left
+        li 
+          a.method-link(href=`${siteDomin}/support.html`) الدعم الفني
+            i.fa-solid.fa-chevron-left
+  // End teacher contact section

@@ -1,0 +1,41 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "invoices"
+    let pageTitle       = "المعلم - الفواتير"
+
+
+//- content This page
+block teacherContent
+  // Start teacher heading section
+  section.student-heading
+    h1.heading.text-center الفواتير
+  // End teacher heading section
+  // Start teacher invoices section
+  section.teacher-invoices
+    ul.teacher-list
+      - for(let i = 1; i <= 4; i++)
+        li  
+          article.teacher-list-box 
+            section.list-item
+              .box 
+                .image #[img(src=`${siteDomin}/assets/images/icons/pdf-icon.webp`, alt="pdf icon")]
+                .content 
+                  h3.title اسم الفاتورة
+                  p.data اشتراك المنصة عن شهر اكتوبر
+            section.list-item
+              h3.title تاريخ السداد
+              p.data 31-10-2023
+            section.list-item
+              h3.title الحالة
+              p.data تم السداد بنجاح
+            section.list-item
+              a.list-action(href="#") عرض الفاتورة
+            section.list-item
+              a.list-action(href="#") تحميل
+            section.list-item
+              a.list-action.delete(href="#") حذف الفاتورة
+  // End teacher invoices section
+  

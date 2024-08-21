@@ -1,0 +1,30 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "contact"
+    let pageTitle       = "المعلم - من نحن "
+
+
+//- content This page
+block teacherContent
+  // Start questions section
+  article.about-us
+    section.content
+      h1.heading من نحن
+      p.description هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+      p.description هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+      ul.about-featuers
+        li.featuer-item
+          img(src=`${siteDomin}/assets/images/about-featuer-1.webp`, alt="icon")
+          h3.featuer-heading الافضل بمصر
+        li.featuer-item
+          img(src=`${siteDomin}/assets/images/about-featuer-2.webp`, alt="icon")
+          h3.featuer-heading طريقك للنجاح
+        li.featuer-item
+          img(src=`${siteDomin}/assets/images/about-featuer-3.webp`, alt="icon")
+          h3.featuer-heading افضل المناهج
+    section.image 
+      img(src=`${siteDomin}/assets/images/about-us.webp`, alt="about us")
+  // End questions section

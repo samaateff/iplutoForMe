@@ -1,0 +1,26 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "archives"
+    let pageTitle       = "المعلم - المراجعات والمحفوظات"
+
+//- content This page
+block teacherContent
+  // Start archives heading section
+  section.archives-heading
+    .student-heading 
+      h1.heading.text-center المراجعات والمحفوظات
+  // End archives heading section
+  // Start archives section
+  section.archives-section
+    - for (let i = 1; i <= 8; i++)
+      a.student-material(href=`${siteDomin}/teacher/lesson.html`)
+        .image.lesson-image
+          img(src=`${siteDomin}/assets/images/lesson-image.webp`, alt="( التحويلات ) ومضاعفات الكسور")
+        .content
+          h5.info.mb-1 الفصل الأول
+          h3.name ( التحويلات ) ومضاعفات الكسور
+          p.teacher محمد سعيد عبدالله
+  // End archives section

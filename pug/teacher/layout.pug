@@ -1,0 +1,18 @@
+extends ../layout
+include ../components/mixins
+
+block header
+  include ../components/teacher-header
+
+block footer
+  include ../components/dashboard-footer
+
+block pageContent
+  .container-fluid
+    article.dashboard-layout
+      //- This block use to : change side menu
+      block sideMenu
+        include ../components/teacher-sidemenu
+      //- This block use to : add content this page
+      article#page-content
+        block teacherContent

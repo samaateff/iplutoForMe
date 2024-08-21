@@ -1,0 +1,79 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "subjects"
+    let pageTitle       = "المعلم - المجموعات الدراسية - الكمياء - الصف الثاني الثانوي"
+
+
+//- content This page
+block teacherContent
+  // Start teacher heading section
+  section.teacher-heading
+    h1.heading المجموعات الدراسية
+    a.add-teaching(href="#add_students_group", data-bs-toggle="modal")
+      i.fa-solid.fa-plus
+      span اضافة مجموعة جديدة
+  // End teacher heading section
+  // Start school level section
+  article.school-level-section
+    - for(let i = 1; i <= 6; i++)
+      secrion.school-level.special
+        .icon 
+          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.50791 13.4584C8.83499 13.4584 8.15416 13.2842 7.62374 12.9438L2.85791 9.83256C1.97124 9.25464 1.44083 8.28089 1.44083 7.22006C1.44083 6.15922 1.97124 5.18547 2.85791 4.60756L7.63166 1.50422C8.69249 0.815475 10.3471 0.815475 11.4 1.51214L16.1421 4.62339C17.0208 5.20131 17.5512 6.17506 17.5512 7.22797C17.5512 8.28089 17.0208 9.25464 16.1421 9.83256L11.4 12.9438C10.8696 13.2921 10.1887 13.4584 9.50791 13.4584ZM9.50791 2.17714C9.05666 2.17714 8.60541 2.28006 8.28083 2.50172L3.51499 5.60506C2.96083 5.96922 2.63624 6.55506 2.63624 7.22006C2.63624 7.88506 2.95291 8.47089 3.51499 8.83506L8.28083 11.9463C8.93791 12.3738 10.0937 12.3738 10.7508 11.9463L15.4929 8.83506C16.0471 8.47089 16.3637 7.88506 16.3637 7.22006C16.3637 6.55506 16.0471 5.96922 15.4929 5.60506L10.7508 2.49381C10.4183 2.28797 9.96708 2.17714 9.50791 2.17714Z" fill="#06D9C8"/><path d="M9.50001 18.0104C9.15168 18.0104 8.79543 17.9629 8.51043 17.8679L5.98501 17.0287C4.78959 16.6329 3.84751 15.3266 3.85543 14.0679L3.86334 10.355C3.86334 10.0304 4.13251 9.76123 4.45709 9.76123C4.78168 9.76123 5.05084 10.0304 5.05084 10.355L5.04293 14.0679C5.04293 14.8121 5.66043 15.6671 6.36501 15.9046L8.89043 16.7437C9.20709 16.8466 9.79293 16.8466 10.1096 16.7437L12.635 15.9046C13.3396 15.6671 13.9571 14.8121 13.9571 14.0758V10.4025C13.9571 10.0779 14.2263 9.80873 14.5508 9.80873C14.8754 9.80873 15.1446 10.0779 15.1446 10.4025V14.0758C15.1446 15.3346 14.2104 16.6329 13.015 17.0366L10.4896 17.8758C10.2046 17.9629 9.84834 18.0104 9.50001 18.0104Z" fill="#06D9C8"/><path d="M16.9417 12.4688C16.6171 12.4688 16.3479 12.1996 16.3479 11.875V7.125C16.3479 6.80042 16.6171 6.53125 16.9417 6.53125C17.2662 6.53125 17.5354 6.80042 17.5354 7.125V11.875C17.5354 12.1996 17.2662 12.4688 16.9417 12.4688Z" fill="#06D9C8"/></svg>
+        h4.heading.mb-1 مجموعة يوم السبت
+        P.heading عدد الطلاب 23
+        a.school-level-button(href=`${siteDomin}/teacher/students-group-lessons.html`) عرض المجموعة
+  // End school level section
+  // Modal => add school level
+  section.main-popup#add_students_group.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          section.student-heading.mb-4.mb-md-5
+            h2.heading.text-center إضافة مجموعة جديدة
+          form.register-form.needs-validation.pt-2.pt-md-0(action="", novalidate)
+            section.custom-select.dropdown
+              label المرحلة الدراسية
+              input#school_level(type="hidden", name="school_level")
+              button.input-button(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+                span اختر الصف الدراسي المراد التدريس له 
+                i.fa-solid.fa-chevron-down
+              ul.dropdown-menu
+                - for (let i = 1; i <= 6; i++)
+                    a.dropdown-item(data-select-value="secondary-school-2" href="#") الصف الثالث الثانوي, علمي علوم
+              span.invalid-feedback الرجاء اختيار الصف الدراسي المراد التدريس له.
+            section.custom-select.dropdown
+              label المادة الدراسية
+              input#subject_teach(type="hidden", name="subject_teach")
+              button.input-button(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+                span اختر المادة الدراسية المراد تدريسها 
+                i.fa-solid.fa-chevron-down
+              ul.dropdown-menu
+                - for (let i = 1; i <= 6; i++)
+                    a.dropdown-item(data-select-value="secondary-school-2" href="#") رياضيات
+              span.invalid-feedback الرجاء اختيار المادة الدراسية المراد تدريسها.
+            section.input-field
+              input.form-control#students_group(type="text", minlength ="3", maxlength="35", name="students_group", required, placeholder="الرجاء كتابة اسم المجموعة الدراسية المراد تدريسها")
+              span.invalid-feedback الرجاء كتابة اسم صالح (من 3 إلى 35 حرف) للمجموعة.
+              label(for="students_group") المجموعة الدراسية
+            // button.submit(type="submit") اضافة
+            button.submit(type="button", data-bs-toggle="modal", data-bs-target="#success_popup") اضافة
+  // Modal => operation success
+  section.main-popup#success_popup.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          section.student-popup-heading 
+            .icon.large #[img(src=`${siteDomin}/assets/images/add-level-success.webp` alt="success")]
+            .heading
+              h2.mb-2 تم الاضافة بنجاح
+              p.description يمكنك تصفح المجموعات الدراسية التي تقوم بتدريسها من خلال قائمة المجموعات الدراسية
+            button.button(type="button", data-bs-dismiss="modal", aria-label="Close") المجموعات الدراسية

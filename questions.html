@@ -1,0 +1,453 @@
+<!--
+project     : I Pluto Student
+made by     : Creative Minds
+website     : https://cems-it.com
+Expiry date : 
+-->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Always force latest IE rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Site description -->
+    <meta name="description" content="مدرسين متخصصين في كافة المواد الدراسية" />
+    <!-- Site Title -->
+    <title>اي بلوتو - الاسئلة الشائعة</title>
+    <!-- Site FavIcon -->
+    <link rel="icon" href="favicon.webp" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css" />
+    <!-- swiper js-->
+    <link rel="stylesheet" href="assets/css/swiper.css" />
+    <!-- Custom Stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Start Header-->
+    <header id="header">
+      <div class="container-lg">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="/"
+            ><img src="assets/images/ipluto-logo.webp" /></a
+          ><a class="user-info d-lg-none" href="/student/profile-setting.html">
+            <div class="avater">
+              <img src="assets/images/student-avatar.webp" alt="user avater" />
+            </div>
+            <div class="info d-none d-lg-block">
+              <span class="welcome">مرحبا بك</span>
+              <h3 class="name">محمد ياسر صلاح حسين</h3>
+              <p class="data">الصف الثالث الثانوي ( علمي علوم )</p>
+            </div></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="offcanvas offcanvas-start" id="navbarHeader">
+            <div class="offcanvas-header">
+              <a class="navbar-brand" href="/"
+                ><img src="assets/images/ipluto-logo.webp"
+              /></a>
+              <button
+                class="close-button"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+                type="button"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/teachers.html">المدرسين</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/registration/sign-in.html">دروسي</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/registration/sign-in.html"
+                  >مواعيدي</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/registration/sign-in.html"
+                  >الملازم</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/contact-us.html"
+                  >تواصل معنا</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link lang" href="/en">
+                  <img
+                    src="assets/images/icons/en-flag.svg"
+                    alt="English flag"
+                  /><span>English</span></a
+                >
+              </li>
+            </ul>
+            <div class="dropdown main-select">
+              <button
+                class="user-info d-none d-lg-flex"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <div class="avater">
+                  <img
+                    src="assets/images/student-avatar.webp"
+                    alt="user avater"
+                  />
+                </div>
+                <div class="info d-none d-lg-block text-start">
+                  <span class="welcome">مرحبا بك</span>
+                  <h3 class="name">محمد ياسر صلاح حسين</h3>
+                  <p class="data">الصف الثالث الثانوي ( علمي علوم )</p>
+                </div>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/student/profile-setting.html"
+                    >حسابي</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item logout" href="/">تسجيل الخروج</a>
+                </li>
+              </ul>
+            </div>
+            <a class="logout d-flex d-lg-none px-3 py-2" href="/"
+              >تسجيل الخروج
+              <div class="icon">
+                <i
+                  class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"
+                ></i></div
+            ></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+    <div id="content">
+      <!-- Start questions section-->
+      <section class="contact-questions main-space mb-0">
+        <div class="container-lg">
+          <div class="student-heading">
+            <h1 class="heading text-center">الاسئلة الشائعة</h1>
+          </div>
+          <article class="main-accordion accordion" id="questions">
+            <section class="accordion-item">
+              <h2
+                class="accordion-header collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#question_1"
+                aria-expanded="true"
+                aria-controls="#question_1"
+              >
+                <span>كيف يمكنني التسجيل في منصة اي - بلوتو !؟</span
+                ><i class="fa-solid fa-chevron-down"></i>
+              </h2>
+              <div
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+                id="question_1"
+              >
+                <div class="accordion-body">
+                  <p>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                    توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                    هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                    الحروف التى يولدها التطبيق.
+                  </p>
+                  <p>
+                    إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص
+                    العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا
+                    يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
+                    وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على
+                    صورة حقيقية لتصميم الموقع.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section class="accordion-item">
+              <h2
+                class="accordion-header collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#question_2"
+                aria-expanded="true"
+                aria-controls="#question_2"
+              >
+                <span>كيف يمكنني التسجيل في منصة اي - بلوتو !؟</span
+                ><i class="fa-solid fa-chevron-down"></i>
+              </h2>
+              <div
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+                id="question_2"
+              >
+                <div class="accordion-body">
+                  <p>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                    توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                    هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                    الحروف التى يولدها التطبيق.
+                  </p>
+                  <p>
+                    إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص
+                    العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا
+                    يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
+                    وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على
+                    صورة حقيقية لتصميم الموقع.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section class="accordion-item">
+              <h2
+                class="accordion-header collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#question_3"
+                aria-expanded="true"
+                aria-controls="#question_3"
+              >
+                <span>كيف يمكنني التسجيل في منصة اي - بلوتو !؟</span
+                ><i class="fa-solid fa-chevron-down"></i>
+              </h2>
+              <div
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+                id="question_3"
+              >
+                <div class="accordion-body">
+                  <p>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                    توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                    هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                    الحروف التى يولدها التطبيق.
+                  </p>
+                  <p>
+                    إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص
+                    العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا
+                    يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
+                    وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على
+                    صورة حقيقية لتصميم الموقع.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section class="accordion-item">
+              <h2
+                class="accordion-header collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#question_4"
+                aria-expanded="true"
+                aria-controls="#question_4"
+              >
+                <span>كيف يمكنني التسجيل في منصة اي - بلوتو !؟</span
+                ><i class="fa-solid fa-chevron-down"></i>
+              </h2>
+              <div
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+                id="question_4"
+              >
+                <div class="accordion-body">
+                  <p>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                    توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                    هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                    الحروف التى يولدها التطبيق.
+                  </p>
+                  <p>
+                    إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص
+                    العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا
+                    يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
+                    وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على
+                    صورة حقيقية لتصميم الموقع.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section class="accordion-item">
+              <h2
+                class="accordion-header collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#question_5"
+                aria-expanded="true"
+                aria-controls="#question_5"
+              >
+                <span>كيف يمكنني التسجيل في منصة اي - بلوتو !؟</span
+                ><i class="fa-solid fa-chevron-down"></i>
+              </h2>
+              <div
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+                id="question_5"
+              >
+                <div class="accordion-body">
+                  <p>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                    توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                    هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                    الحروف التى يولدها التطبيق.
+                  </p>
+                  <p>
+                    إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص
+                    العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا
+                    يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
+                    وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على
+                    صورة حقيقية لتصميم الموقع.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section class="accordion-item">
+              <h2
+                class="accordion-header collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#question_6"
+                aria-expanded="true"
+                aria-controls="#question_6"
+              >
+                <span>كيف يمكنني التسجيل في منصة اي - بلوتو !؟</span
+                ><i class="fa-solid fa-chevron-down"></i>
+              </h2>
+              <div
+                class="accordion-collapse collapse"
+                data-bs-parent="#questions"
+                id="question_6"
+              >
+                <div class="accordion-body">
+                  <p>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                    توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                    هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                    الحروف التى يولدها التطبيق.
+                  </p>
+                  <p>
+                    إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص
+                    العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا
+                    يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على
+                    وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على
+                    صورة حقيقية لتصميم الموقع.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </article>
+        </div>
+      </section>
+      <!-- End questions section-->
+    </div>
+    <!-- start Footer-->
+    <footer id="footer">
+      <div class="container-lg">
+        <article>
+          <figure class="image">
+            <img src="assets/images/footer-logo.webp" alt="ipluto logo" />
+          </figure>
+        </article>
+        <article>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/">الرئيسية</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="/teachers.html">المدرسين</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registration/sign-in.html">دروسي</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registration/sign-in.html">مواعيدي</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registration/sign-in.html">الملازم</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/contact-us.html">تواصل معنا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link lang" href="/en">
+                <img
+                  src="assets/images/icons/en-flag.svg"
+                  alt="English flag"
+                /><span>English</span></a
+              >
+            </li>
+          </ul>
+          <article class="footer-box">
+            <ul class="social-footer">
+              <li>
+                <a class="link" href="https://twitter.com/" target="_blank">
+                  <i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="link"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+            </ul>
+            <ul class="sign-buttons">
+              <li>
+                <a class="main-button" href="/registration/teacher-sign.html"
+                  >مدرس, سجل حسابك الان</a
+                >
+              </li>
+              <li>
+                <a class="second-button" href="/registration/sign-up.html"
+                  >سجل حساب جديد</a
+                >
+              </li>
+            </ul>
+            <p class="copywrite">
+              جميع الحقوق محفوظة لمنصة <a href="/"> اي-بلوتو</a> التعليمية 2023
+            </p>
+          </article>
+        </article>
+      </div>
+    </footer>
+    <!-- End Footer-->
+    <!-- Fontawesome -->
+    <script src="assets/js/all.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper js-->
+    <script src="assets/js/swiper.js"></script>
+    <!-- sweetalert2-->
+    <script src="assets/js/sweetalert2.min.js"></script>
+    <!-- jquery in order to daterangepicker-->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Custom script-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>

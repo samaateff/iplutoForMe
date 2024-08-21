@@ -1,0 +1,43 @@
+extends profile-setting
+include ../components/mixins
+
+append variable
+  - 
+    pageTitle = "الطالب - تعديل البريد الإلكتروني"
+
+
+//- content This page
+block profileContent
+  // Start profile change 
+  // Start profile change data section
+  section.profile-change-data
+    h1.profile-heading.mb-4 تغيير البريد الالكتروني
+    section.register-heading 
+      .icon #[img(src=src=`${siteDomin}/assets/images/icons/message-code.svg` alt="كود التحقق")]
+      h2.heading قمنا بأرسال رمز تاكيد علي البريد الالكتروني
+      p.heading mail@mailto.com
+    form.register-form.needs-validation(action=`${siteDomin}/student/profile-confirmation-code.html`, novalidate)
+      section.otp-inputs
+        input.form-control#otp_code_1(type="number", minlength ="1", maxlength="1", required, name="otp_code_1", focus)
+        input.form-control#otp_code_2(type="number", minlength ="1", maxlength="1", required, name="otp_code_2")
+        input.form-control#otp_code_3(type="number", minlength ="1", maxlength="1", required, name="otp_code_3")
+        input.form-control#otp_code_4(type="number", minlength ="1", maxlength="1", required, name="otp_code_4")
+        input.form-control#otp_code_5(type="number", minlength ="1", maxlength="1", required, name="otp_code_5")
+        input.form-control#otp_code_6(type="number", minlength ="1", maxlength="1", required, name="otp_code_6")
+        .invalid-feedback يرجى ادخال كود تحقق صالح
+      p.form-alert.text-center لم يصلك اي رمز!؟  #[a(href=`#`) اعادة ارسال ] رمز اخر
+      //- button.submit.mt-4(type="submit") متابعة
+      button.submit.mt-4(type="button" data-bs-toggle="modal" data-bs-target="#profile_success_popup") متابعة
+  // End profile change data section
+  // Modal => operation success
+  section.main-popup#profile_success_popup.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          section.student-popup-heading 
+            .icon #[img(src=src=`${siteDomin}/assets/images/student-success.webp` alt="success")]
+            h2.heading تم الحفظ بنجاح
+            a.button(href=`${siteDomin}/student/profile-setting.html`) الملف الشخصي

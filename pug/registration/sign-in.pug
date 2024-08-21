@@ -1,0 +1,104 @@
+extends ../layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "sign-in"
+    let pageTitle       = "اي بلوتو - تسجيل الدخول"
+
+//- content This page
+block pageContent
+  // Start registration section
+  section.registration-section
+    .container-lg
+      ul.register-nav 
+        li 
+          a.nav-link(href=`${siteDomin}/registration/sign-up.html` class=(page === "sign-up" ? "active" : null)) تسجيل حساب جديد
+        li 
+          span.nav-link(href=`${siteDomin}/registration/sign-in.html` class=(page === "sign-in" ? "active" : null)) تسجيل الدخول
+      article.registration-box
+        h1.register-title تسجيل الدخول
+        form.register-form.needs-validation(action="", novalidate)
+          .d-flex.align-items-start.gap-2
+            .input-field
+              input.form-control#user_phone(type="number", minlength ="11", maxlength="13", name="user_phone", required)
+              span.invalid-feedback الرجاء كتابة رقم هاتف صالح.
+              label(for="user_phone") رقم الهاتف
+              span.icon #[i.fa-solid.fa-mobile-screen]
+            .select-number-code
+              input(type="hidden", name="country_code", value="+966")
+              button.input-button.option-select(type="button" data-bs-toggle="dropdown" aria-expanded="false", data-bs-auto-close="outside")
+                .flag 
+                  img(src=`${siteDomin}/assets/images/icons/flag-2.svg`)
+                span +20
+                i.fa-solid.fa-chevron-down
+              ul.dropdown-menu.options-dropdown.dropdown-menu-end
+                header.options-header
+                  button.btn-close(type="button", aria-label="Close")
+                  input(type="search", name="")
+                article.options-body
+                  a.dropdown-item(href="#", data-value="+966")
+                    .flag 
+                      img(src=`${siteDomin}/assets/images/icons/flag-1.svg`)
+                    .d-flex.justify-content-between.align-items-center.flex-grow-1.gap-8
+                      span المملكة العربية السعودية
+                      span(dir="ltr") +966
+                  a.dropdown-item(href="#", data-value="+20")
+                    .flag 
+                      img(src=`${siteDomin}/assets/images/icons/flag-2.svg`)
+                    .d-flex.justify-content-between.align-items-center.flex-grow-1.gap-8
+                      span مصر
+                      span +20
+          .input-field.password
+            input.form-control#user_password(type="password", minlength ="8", maxlength="25", name="user_password", required)
+            span.invalid-feedback الرجاء كتابة كلمة مرورة صالحة
+            label(for="user_password") كلمة المرور
+            span.icon #[i.fa-solid.fa-lock]
+            span.eye #[i.fa-solid.fa-eye]
+          p.form-alert نسيت كلمة المرور #[a(href=`${siteDomin}/registration/reset-password.html`) اعادة تعيين! ] الان
+          // button.submit(type="submit") دخول
+          button.submit(type="button" data-bs-toggle="modal" data-bs-target="#logged_another_device") دخول
+  // End registration  section
+  // Modal => operation success
+  section.main-popup#success_popup.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          section.register-heading 
+            .icon #[img(src=src=`${siteDomin}/assets/images/icons/success.svg` alt="success")]
+            h2.heading تم تسجيل الدخول بنجاح
+  // Modal => operation erorr
+  section.main-popup#erorr_popup.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          section.register-heading 
+            .icon #[img(src=src=`${siteDomin}/assets/images/icons/erorr.svg` alt="success")]
+            h2.heading فشل تسجيل الدخول
+  // Modal => operation erorr
+  section.main-popup#logged_another_device.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          section.register-heading 
+            .icon #[img(src=src=`${siteDomin}/assets/images/icons/erorr.svg` alt="success")]
+            h2.heading عفوا, لا يمكنك تسجيل الدخول علي هذا الجهاز
+            p.text يسمح بتسجيل الدخول من جهاز واحد فقط
+            hr 
+            p.description يجب عليك تسجيل الخروج من هذة الاجهزة لكي تتمكن من تسجيل الدخول علي هذا الجهاز
+            .box-between.align-items-start.align-items-sm-center
+              section.icon-box
+                span.icon #[i.fa-solid.fa-mobile-screen]
+                p.small-text تم تسجيل الدخول بواسطة I-Phone 15 Pro بتاريخ 10-10-2023
+              a.logout(href="#") تسجيل الخروج
+              // If the logout ends successfully
+              // span.logout.done(href="#") تم تسجيل الخروج

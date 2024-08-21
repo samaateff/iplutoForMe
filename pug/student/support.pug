@@ -1,0 +1,61 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "support"
+    let pageTitle       = "الطالب - الدعم الفني"
+
+
+//- content This page
+block studentContent
+  // Start support heading section
+  section.student-heading
+    h1.heading.text-center الدعم الفني
+  // End support heading section
+  // Start support welcome section
+  main.support-welcome
+    p.text اهلا بك, محمد
+    p.text كيف يمكننا تقديم المساعدة لك !؟
+  // End support welcome section  
+  // Start support layout section
+  article.support-layout
+    section.support-box
+      .student-heading
+        h2.heading اكتب رسالتك لنا ...
+      form.support-form.needs-validation(action="", novalidate) 
+        .from-box
+          section.input-field
+            input.form-control#user_name(type="text", minlength ="3", maxlength="35", name="user_name", required, placeholder="الاسم بالكامل")
+            span.invalid-feedback الرجاء كتابة اسم مستخدم صالح (من 3 إلى 35 حرف).
+          section.input-field
+            input.form-control#user_phone(type="number", minlength ="11", maxlength="13", name="user_phone", required, placeholder="رقم الهاتف")
+            span.invalid-feedback الرجاء كتابة رقم هاتف صالح.
+        .from-box
+          section.input-field
+            input.form-control#user_email(type="email", name="user_email", required, placeholder="البريد الالكتروني")
+            span.invalid-feedback الرجاء كتابة بريد إلكتروني صالح.
+          section.input-field
+            input.form-control#user_address(type="text", minlength ="3", maxlength="60", name="user_address", required, placeholder="العنوان")
+            span.invalid-feedback الرجاء كتابة عنوان صالح.
+        section.input-field
+          textarea#user_message.form-control(name="user_message", rows="4", placeholder="اكتب استفسارك", required)
+          span.invalid-feedback  يرجى كتابة رسالة توضح ما هي مشكلتك
+        button(type="submit") ارسال
+    section.support-box
+      .student-heading
+        h2.heading او تواصل معنا من خلال ...
+      ul.support-methods
+        li
+          a.method(href="#") 
+            span.icon #[img(src=`${siteDomin}/assets/images/icons/whatsapp.webp` alt="icon")]
+            span واتس اب
+        li
+          a.method(href="#") 
+            span.icon #[img(src=`${siteDomin}/assets/images/icons/messenger.webp` alt="icon")]
+            span ماسينجر
+        li
+          a.method(href="#") 
+            span.icon #[img(src=`${siteDomin}/assets/images/icons/contact-phone.webp` alt="icon")]
+            span مكالمة هاتفية
+  // End support layout section  

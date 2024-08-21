@@ -1,0 +1,18 @@
+extends profile-setting
+include ../components/mixins
+
+append variable
+  - 
+    pageTitle = "المعلم - تعديل رقم الهاتف"
+
+//- content This page
+block profileContent
+  // Start profile change data section
+  section.profile-change-data
+    h2.profile-heading تغيير رقم الهاتف
+    form.register-form.needs-validation(action=`${siteDomin}/teacher/profile-confirmation-code.html`, novalidate)
+      section.input-field.profile-field
+        input.form-control#user_phone(type="number", minlength ="11", maxlength="13", name="user_phone", required, placeholder="اكتب رقم الهاتف الجديد")
+        span.invalid-feedback الرجاء كتابة رقم هاتف صالح.
+      button.submit.mt-4(type="submit") التالي
+  // End profile change data section

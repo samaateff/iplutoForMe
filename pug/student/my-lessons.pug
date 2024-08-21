@@ -1,0 +1,28 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "my-lessons"
+    let pageTitle       = "الطالب - دروسي"
+
+
+//- content This page
+block studentContent
+  // Start my lessons heading section
+  section.profile-heading
+    .student-heading 
+      h1.heading.text-start الدروس والحصص المسجل بها
+  // End my lessons heading section
+  // Start materials-section section
+  section.materials-section
+    - for (let i = 1; i <= 8; i++)
+      a.student-material(href=`${siteDomin}/student/teacher-material.html`)
+        .image
+          img(src=`${siteDomin}/assets/images/my-lessons.webp`, alt="كمياء عضوية")
+        .content
+          h3.name كمياء عضوية
+          hr
+          p.teacher اسماء سعيد محمد
+          h5.info 6 حصص
+  // End materials-section section

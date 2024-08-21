@@ -1,0 +1,41 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "lesson-recording"
+    let pageTitle       = "المعلم - تسجيل الدرس"
+
+//- content This page
+block teacherContent
+  // Start teacher heading section
+  section.teacher-heading
+    h1.heading.text-center اعدادات نشر الحصة
+  // End teacher heading section
+  // Start add stuednt section
+  section.add-stuednt-section
+    h2.lesson-recording-heading طالب واحد فقط
+    form.register-form.needs-validation(action="", novalidate)
+      .input-field
+        input.form-control#user_phone(type="number", minlength ="11", maxlength="13", name="user_phone", required)
+        span.invalid-feedback الرجاء كتابة رقم هاتف صالح.
+        label(for="user_phone") اكتب رقم الهاتف الخاص بالطالب
+        span.icon #[i.fa-solid.fa-mobile-screen]
+      section.mt-4.mt-sm-5
+        // button.start-recording(type="submit") اضافة
+        button.start-recording(type="button", data-bs-target="#success_popup", data-bs-toggle="modal") اضافة
+  // End add stuednt section
+  // Modal => operation success
+  section.main-popup#success_popup.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          section.student-popup-heading 
+            .icon.large #[img(src=`${siteDomin}/assets/images/add-level-success.webp` alt="success")]
+            .heading
+              h2.mb-2 تم النشر بنجاح
+              p.description يمكنك تصفح كافة الحصص من خلال قائمة الدروس
+            a.button(href=`${siteDomin}/teacher/chapter-lessons.html`) دروسي

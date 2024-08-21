@@ -1,0 +1,70 @@
+//
+    project     : I Pluto Student
+    made by     : Creative Minds
+    website     : https://cems-it.com
+    Expiry date : 
+|
+|
+//-
+  This block use to : set main Page info
+  [page - title - description - favIcon]
+block variable
+  - 
+    let siteDomin = ""
+    let lang      = "ar"
+    let dir       = "rtl"
+
+doctype html
+html(lang=lang dir=dir)
+  head
+    // meta character set 
+    meta(charset="UTF-8")
+    // Always force latest IE rendering engine 
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    // Mobile Specific Meta 
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    // Site description 
+    meta(name="description", content="مدرسين متخصصين في كافة المواد الدراسية")
+    // Site Title 
+    title= pageTitle
+    // Site FavIcon 
+    link(rel="icon", href=`${siteDomin}/favicon.webp`)
+    //- This block use to : set and change stylesheets
+    block stylesheets
+      // Fontawesome 
+      link(rel="stylesheet", href=`${siteDomin}/assets/css/all.min.css`)
+      // Bootstrap 
+      link(rel="stylesheet", href=`${siteDomin}/assets/css/bootstrap.min.css`)
+      link(rel="stylesheet", href=`${siteDomin}/assets/css/bootstrap.rtl.min.css`)
+      // swiper js
+      link(rel="stylesheet" href=`${siteDomin}/assets/css/swiper.css`) 
+      // Custom Stylesheet
+      link(rel="stylesheet", href=`${siteDomin}/assets/css/style.css`)
+  body
+    //- This block use to : change and remove Header
+    block header
+      include components/header
+    #content
+      //- This block use to : add content this page
+      block pageContent
+    //- This block use to : change and remove Footer
+    block footer
+      include components/footer
+    //- This block use to : set and change scripts
+    block scripts
+      // Fontawesome 
+      script(src=`${siteDomin}/assets/js/all.min.js`)
+      // Bootstrap
+      script(src=`${siteDomin}/assets/js/bootstrap.bundle.min.js`)
+      // swiper js
+      script(src=`${siteDomin}/assets/js/swiper.js`)
+      // sweetalert2
+      script(src=`${siteDomin}/assets/js/sweetalert2.min.js`)
+      // jquery in order to daterangepicker
+      script(src=`${siteDomin}/assets/js/jquery.min.js`)
+      // Custom script
+      script(src=`${siteDomin}/assets/js/main.js`)
+      script(src=`${siteDomin}/assets/js/custom.js`)
+
+
+  

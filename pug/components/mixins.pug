@@ -1,0 +1,53 @@
+mixin page-heading(title, description)
+  .main-page-heading
+    h1= title
+    p= description
+
+mixin company-info
+  ul.company-info
+    li
+      i.fa-solid.fa-phone-volume
+      a(href="tel:+966509322852" style="direction: ltr;") +966509322852
+    li
+      i.fa-regular.fa-envelope
+      a(href="mailTo:info@golden4tic.com") info@golden4tic.com
+
+mixin contact-form 
+  form.contact-us-form(action="")
+    .feild-group   
+      input(type="text" placeholder="الاسم" name="user_name")
+      input(type="text" placeholder="رقم هاتف بالصيغه 966555555555" name="user_phone")
+    input(type="email" placeholder="البريد الالكترونى" name="user_email")
+    input(type="text" placeholder="الموضوع" name="subject")
+    textarea(name="message", rows="3", placeholder="الرسالة")
+    button(type="submit") ارسال
+
+mixin post(link, imgSrc, imgAlt, title, brief)
+  section.post
+    a(href=link) 
+      section.image
+        img(src=imgSrc, alt=imgAlt)
+      section.info 
+        h3= title
+        p= brief
+        |
+        |
+        a.read-more(href=link) اكمل القراءة #[i.fa-solid.fa-chevron-left]
+
+
+mixin event(link, imgSrc, imgAlt, price, day, month, title, location, time)
+  section.event
+    a(href=link) 
+      .image
+        img(src=imgSrc, alt=imgAlt)
+        .badge-price !{price}
+        block sellerBadge
+      article.info 
+        section.date 
+          sapn.day !{day}
+          sapn.month !{month}
+        section.text
+          h4 !{title}
+          .d-flex 
+            address.address #[i.fa-solid.fa-location-dot] #{location}
+            p.time #[i.fa-regular.fa-clock] #{time}

@@ -1,0 +1,12 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "live-feed"
+    let pageTitle       = "الطالب - البث المباشر"
+
+
+//- content This page
+block studentContent
+  h1.text-center= pageTitle 

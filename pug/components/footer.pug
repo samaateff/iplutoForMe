@@ -1,0 +1,44 @@
+include mixins
+
+// start Footer
+footer#footer
+  .container-lg
+    article  
+      figure.image 
+        img(src=`${siteDomin}/assets/images/footer-logo.webp`, alt="ipluto logo")
+    article 
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(href=`${siteDomin}/` class=(page === "home" ? "active" : null)) الرئيسية
+        li.nav-item
+          a.nav-link(href=`${siteDomin}/teachers.html` class=(page === "teachers" ? "active" : null)) المدرسين
+        li.nav-item
+          a.nav-link(href=`${siteDomin}/registration/sign-in.html`) دروسي
+        li.nav-item
+          a.nav-link(href=`${siteDomin}/registration/sign-in.html`) مواعيدي
+        li.nav-item
+          a.nav-link(href=`${siteDomin}/registration/sign-in.html`) الملازم
+        li.nav-item
+          a.nav-link(href=`${siteDomin}/contact-us.html` class=(page === "contact-us" ? "active" : null)) تواصل معنا
+        li.nav-item
+          a.nav-link.lang(href=`${siteDomin}/en`) 
+            img(src=`${siteDomin}/assets/images/icons/en-flag.svg`, alt="English flag")
+            span English
+      article.footer-box
+        ul.social-footer
+          li
+            a.link(href="https://twitter.com/", target="_blank") 
+              i.fa-brands.fa-x-twitter
+          li
+            a.link(href="https://www.linkedin.com/", target="_blank") 
+              i.fa-brands.fa-linkedin-in
+          li
+            a.link(href="https://www.facebook.com/", target="_blank") 
+              i.fa-brands.fa-facebook-f
+        ul.sign-buttons 
+          li
+            a.main-button(href=`${siteDomin}/registration/teacher-sign.html`) مدرس, سجل حسابك الان
+          li
+            a.second-button(href=`${siteDomin}/registration/sign-up.html`) سجل حساب جديد
+        p.copywrite جميع الحقوق محفوظة لمنصة #[a(href=`${siteDomin}/`)  اي-بلوتو] التعليمية 2023
+// End Footer

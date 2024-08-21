@@ -1,0 +1,63 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "addition-codes"
+    let pageTitle       = "الطالب - اكود الاضافة"
+
+
+//- content This page
+block studentContent
+  // Start codes heading section
+  section.codes-heading
+    .student-heading.text-center 
+      h1.heading اكواد الاضافة 
+  // End codes heading section
+  // Start addition-codes section
+  section.addition-codes
+    ul.codes-list
+      - for(let i = 1; i < 4; i++)
+        li.addition-code-item
+          .code-data
+            h4.label اسم المادة
+            p.name لغة عربية
+          .code-data
+            h4.label اسم المعلم
+            p.name محمد السيد سعيد
+          .code-data
+            h4.label السنة الدراسية
+            p.name الصف الثالث الثانوي
+          .code-data
+            h4.label كود الاضافة
+            p.name #FREE-ARABIC-12
+          .code-actions 
+            button.clipboard.action(type="button", data-clipboard-text="FREE-ARABIC-12") 
+              i.fa-regular.fa-copy
+              span.copy-alet تم النسخ
+            a.action(href=`${siteDomin}/student/add-addition-codes.html`) 
+              i.fa-regular.fa-eye
+        li.addition-code-item
+          .code-data
+            h4.label اسم المادة
+            p.name كمياء
+          .code-data
+            h4.label اسم المعلم
+            p.name محمد السيد 
+          .code-data
+            h4.label السنة الدراسية
+            p.name الصف الثالث الثانوي علمي
+          .code-data
+            h4.label كود الاضافة
+            p.name #FREE-ARABIC-12
+          .code-actions 
+            button.clipboard.action(type="button", data-clipboard-text="FREE-ARABIC-12") 
+              i.fa-regular.fa-copy
+              span.copy-alet تم النسخ
+            a.action(href=`${siteDomin}/student/add-addition-codes.html`) 
+              i.fa-regular.fa-eye
+    a.add-code-link(href=`${siteDomin}/student/add-addition-codes.html`) 
+      i.fa-solid.fa-plus
+      span اضافة كود جديد
+  // End addition-codes section
+

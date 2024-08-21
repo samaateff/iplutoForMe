@@ -1,0 +1,30 @@
+extends ../layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "confirmation-code"
+    let pageTitle       = "اي بلوتو - كود التحقق"
+
+//- content This page
+block pageContent
+  // Start registration section
+  section.registration-section
+    .container-lg
+      article.registration-box
+        section.register-heading 
+          .icon #[img(src=src=`${siteDomin}/assets/images/icons/message-code.svg` alt="كود التحقق")]
+          h1.heading قمنا بأرسال رمز تاكيد علي رقم هاتفك
+          p.number 201115514107+
+        form.register-form.needs-validation(action=`${siteDomin}/registration/educational-level.html`, novalidate)
+          section.otp-inputs
+            input.form-control#otp_code_1(type="number", minlength ="1", maxlength="1", required, name="otp_code_1", focus)
+            input.form-control#otp_code_2(type="number", minlength ="1", maxlength="1", required, name="otp_code_2")
+            input.form-control#otp_code_3(type="number", minlength ="1", maxlength="1", required, name="otp_code_3")
+            input.form-control#otp_code_4(type="number", minlength ="1", maxlength="1", required, name="otp_code_4")
+            input.form-control#otp_code_5(type="number", minlength ="1", maxlength="1", required, name="otp_code_5")
+            input.form-control#otp_code_6(type="number", minlength ="1", maxlength="1", required, name="otp_code_6")
+            .invalid-feedback يرجى ادخال كود تحقق صالح
+          p.form-alert.text-center لم يصلك اي رمز!؟  #[a(href=`#`) اعادة ارسال ] رمز اخر
+          button.submit(type="submit") متابعة
+  // End registration  section

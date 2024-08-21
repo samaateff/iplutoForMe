@@ -1,0 +1,28 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "lesson"
+    let pageTitle       = "المعلم - الطلاب الصف الاول الثانوي"
+
+
+//- content This page
+block teacherContent
+  // Start teacher heading section
+  section.teacher-heading.mb-3
+    .heading-box
+      h1.heading.text-center مادة الرياضيات
+      p.description.text-center الصف الاول الثانوي
+  section.teacher-heading.align-items-start.border-0.pb-0
+    section.material-data
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12.2479C7.2075 12.2479 5.7525 10.7929 5.7525 9.00043C5.7525 7.20793 7.2075 5.75293 9 5.75293C10.7925 5.75293 12.2475 7.20793 12.2475 9.00043C12.2475 10.7929 10.7925 12.2479 9 12.2479ZM9 6.87793C7.83 6.87793 6.8775 7.83043 6.8775 9.00043C6.8775 10.1704 7.83 11.1229 9 11.1229C10.17 11.1229 11.1225 10.1704 11.1225 9.00043C11.1225 7.83043 10.17 6.87793 9 6.87793Z" fill="#06D9C8"/><path d="M9 15.7654C6.18 15.7654 3.5175 14.1154 1.6875 11.2504C0.892498 10.0129 0.892498 7.99535 1.6875 6.75035C3.525 3.88535 6.1875 2.23535 9 2.23535C11.8125 2.23535 14.475 3.88535 16.305 6.75035C17.1 7.98785 17.1 10.0054 16.305 11.2504C14.475 14.1154 11.8125 15.7654 9 15.7654ZM9 3.36035C6.5775 3.36035 4.26 4.81535 2.64 7.35785C2.0775 8.23535 2.0775 9.76535 2.64 10.6429C4.26 13.1854 6.5775 14.6404 9 14.6404C11.4225 14.6404 13.74 13.1854 15.36 10.6429C15.9225 9.76535 15.9225 8.23535 15.36 7.35785C13.74 4.81535 11.4225 3.36035 9 3.36035Z" fill="#06D9C8"/></svg>
+      span.number 45
+      span.text مشاهدة
+    h2.heading.text-center الدرس الاول - العلاقات وتمثيلها بيانيا
+    a.back-home(href=`${siteDomin}/teacher/chapter-lessons.html`) 
+      span رجوع
+      i.fa-solid.fa-arrow-left-long
+  section.video-palyer.full-width
+    video(src=`${siteDomin}/assets/images/teacher-video.mp4` controls poster=`${siteDomin}/assets/images/footer-logo.webp`) 
+  // End teacher heading section

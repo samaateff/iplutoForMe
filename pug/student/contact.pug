@@ -1,0 +1,32 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "contact"
+    let pageTitle       = "الطالب - التواصل"
+
+
+//- content This page
+block studentContent
+  // Start student contact section
+  section.student-contact
+    .student-heading 
+      h1.heading.text-center تواصل معنا
+    ul.student-option
+      li 
+        a.method-link(href=`${siteDomin}/student/about-us.html`) من نحن
+          i.fa-solid.fa-chevron-left
+      li 
+        a.method-link(href=`${siteDomin}/student/questions.html`) الاسئلة الشائعة
+          i.fa-solid.fa-chevron-left
+      li 
+        a.method-link(href=`${siteDomin}/student/terms-conditions.html`) الشروط والاحكام
+          i.fa-solid.fa-chevron-left
+      li 
+        a.method-link(href=`${siteDomin}/student/privacy-policy.html`) سياسة الخصوصية
+          i.fa-solid.fa-chevron-left
+      li 
+        a.method-link(href=`${siteDomin}/student/support.html`) الدعم الفني
+          i.fa-solid.fa-chevron-left
+  // End student contact section

@@ -1,0 +1,32 @@
+extends profile-setting
+include ../components/mixins
+
+append variable
+  - 
+    pageTitle = "الطالب - تعديل الاسم"
+
+
+//- content This page
+block profileContent
+  // Start profile change data section
+  section.profile-change-data
+    h2.profile-heading تعديل الاسم
+    form.register-form.needs-validation(action="", novalidate)
+      section.input-field.profile-field
+        input.form-control#user_name(type="text", minlength ="3", maxlength="35", name="user_name", required, placeholder="اكتب اسمك بالكامل")
+        span.invalid-feedback الرجاء كتابة اسم مستخدم صالح (من 3 إلى 35 حرف).
+      // button.submit.mt-4(type="submit") حفظ
+      button.submit.mt-4(type="button" data-bs-toggle="modal" data-bs-target="#profile_success_popup") حفظ
+  // End profile change data section
+  // Modal => operation success
+  section.main-popup#profile_success_popup.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          section.student-popup-heading 
+            .icon #[img(src=src=`${siteDomin}/assets/images/student-success.webp` alt="success")]
+            h2.heading تم الحفظ بنجاح
+            a.button(href=`${siteDomin}/student/profile-setting.html`) الملف الشخصي

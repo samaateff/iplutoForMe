@@ -1,0 +1,62 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "subjects"
+    let pageTitle       = "المعلم- إضافة طالب - مجموعة يوم السبت - الرياضيات - الصف الاول الثانوي"
+
+
+//- content This page
+block teacherContent
+  // Start teacher heading section
+  section.teacher-heading.mb-3
+    section.completion-progress.d-none.d-lg-block(data-percentage="50")
+      h3.progress-heading نسبة الاكتمال
+      .full-progress
+        span.inner-progress
+        span.percentage 50%
+    .heading-box
+      h1.heading مادة الرياضيات
+      p.description مجموعة يوم السبت
+    a.back-home(href=`${siteDomin}/teacher/students-level.html`) 
+      span رجوع
+      i.fa-solid.fa-arrow-left-long
+  // End teacher heading section
+  // Start add stuednt section
+  section.add-stuednt-section
+    .teacher-heading.pb-0.border-0
+      a.students-info-box(href=`${siteDomin}/teacher/students-group-students.html`)
+        h3.info-heading الطلاب
+        ul.info-images 
+          - for(let i = 1; i <= 4; i++)
+            li.image-item #[img(src=`${siteDomin}/assets/images/teacher-info.webp`, alt="student image")]
+          li.image-item.end +22
+      h2.heading.text-center اضافة طالب جديد
+      a.add-by-excel(href="#") 
+        span.text اضافة من خلال شيت اكسيل
+        img(src=`${siteDomin}/assets/images/excel.webp`, alt="excel icon")
+    form.register-form.needs-validation(action="", novalidate)
+      h2.form-alert.mb-4.text-center اكتب رقم الهاتف الخاص بالطالب
+      .input-field
+        input.form-control#user_phone(type="number", minlength ="11", maxlength="13", name="user_phone", required)
+        span.invalid-feedback الرجاء كتابة رقم هاتف صالح.
+        label(for="user_phone") رقم الهاتف
+        span.icon #[i.fa-solid.fa-mobile-screen]
+      // button.submit(type="submit") اضافة
+      button.submit(type="button", data-bs-target="#success_popup", data-bs-toggle="modal") اضافة
+  // End add stuednt section
+  // Modal => operation success
+  section.main-popup#success_popup.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          section.student-popup-heading 
+            .icon.large #[img(src=`${siteDomin}/assets/images/add-level-success.webp` alt="success")]
+            .heading
+              h2.mb-2 تم الارسال بنجاح
+              p.description يمكنك تصفح المواد الدراسية التي تقوم بتدريسها من خلال قائمة المواد الدراسية
+            a.button(href=`${siteDomin}/teacher/chapter-lessons.html`) المواد الدراسية

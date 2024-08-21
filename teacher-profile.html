@@ -1,0 +1,771 @@
+<!--
+project     : I Pluto Student
+made by     : Creative Minds
+website     : https://cems-it.com
+Expiry date : 
+-->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Always force latest IE rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Site description -->
+    <meta name="description" content="مدرسين متخصصين في كافة المواد الدراسية" />
+    <!-- Site Title -->
+    <title>اي بلوتو - أ. سيف دياب محمدي</title>
+    <!-- Site FavIcon -->
+    <link rel="icon" href="favicon.webp" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css" />
+    <!-- swiper js-->
+    <link rel="stylesheet" href="assets/css/swiper.css" />
+    <!-- Custom Stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Start Header-->
+    <header id="header">
+      <div class="container-lg">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="/"
+            ><img src="assets/images/ipluto-logo.webp" /></a
+          ><a class="user-info d-lg-none" href="/student/profile-setting.html">
+            <div class="avater">
+              <img src="assets/images/student-avatar.webp" alt="user avater" />
+            </div>
+            <div class="info d-none d-lg-block">
+              <span class="welcome">مرحبا بك</span>
+              <h3 class="name">محمد ياسر صلاح حسين</h3>
+              <p class="data">الصف الثالث الثانوي ( علمي علوم )</p>
+            </div></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="offcanvas offcanvas-start" id="navbarHeader">
+            <div class="offcanvas-header">
+              <a class="navbar-brand" href="/"
+                ><img src="assets/images/ipluto-logo.webp"
+              /></a>
+              <button
+                class="close-button"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+                type="button"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/teachers.html">المدرسين</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/registration/sign-in.html">دروسي</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/registration/sign-in.html"
+                  >مواعيدي</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/registration/sign-in.html"
+                  >الملازم</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact-us.html">تواصل معنا</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link lang" href="/en">
+                  <img
+                    src="assets/images/icons/en-flag.svg"
+                    alt="English flag"
+                  /><span>English</span></a
+                >
+              </li>
+            </ul>
+            <div class="dropdown main-select">
+              <button
+                class="user-info d-none d-lg-flex"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <div class="avater">
+                  <img
+                    src="assets/images/student-avatar.webp"
+                    alt="user avater"
+                  />
+                </div>
+                <div class="info d-none d-lg-block text-start">
+                  <span class="welcome">مرحبا بك</span>
+                  <h3 class="name">محمد ياسر صلاح حسين</h3>
+                  <p class="data">الصف الثالث الثانوي ( علمي علوم )</p>
+                </div>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/student/profile-setting.html"
+                    >حسابي</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item logout" href="/">تسجيل الخروج</a>
+                </li>
+              </ul>
+            </div>
+            <a class="logout d-flex d-lg-none px-3 py-2" href="/"
+              >تسجيل الخروج
+              <div class="icon">
+                <i
+                  class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"
+                ></i></div
+            ></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+    <div id="content">
+      <!-- Start teacher Header section-->
+      <section class="main-space">
+        <div class="container-lg">
+          <section class="teacher-info">
+            <section class="image">
+              <img src="assets/images/teacher-info.webp" alt="سيف دياب محمدي" />
+            </section>
+            <section class="content">
+              <h1 class="name">أ. سيف دياب محمدي</h1>
+              <h4 class="heading">معلم اول</h4>
+              <article class="info-box">
+                <section class="info">
+                  <div class="icon">
+                    <img src="assets/images/icons/book.svg" alt="icon" />
+                  </div>
+                  <h3 class="info-heading">مادة الفيزياء, كمياء</h3>
+                </section>
+                <section class="info">
+                  <div class="icon">
+                    <img
+                      src="assets/images/icons/video-circle.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <h3 class="info-heading">
+                    عدد الدروس ( <span class="special">22</span> )
+                  </h3>
+                </section>
+                <section class="info">
+                  <div class="rate">
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-regular fa-star"></i>
+                  </div>
+                  <h3 class="info-heading">
+                    ( <span class="special">34</span> ) تقييم ايجابي
+                  </h3>
+                </section>
+              </article>
+            </section>
+          </section>
+        </div>
+      </section>
+      <!-- End teacher Header section -->
+      <!-- Start teacher brief section-->
+      <section class="main-space">
+        <div class="container-lg">
+          <article class="teacher-resume">
+            <h2 class="second-heading mb-0">
+              <span>السيرة الذاتية</span
+              ><span class="icon">
+                <img src="assets/images/icons/edit-pen.svg" alt="pen icon"
+              /></span>
+            </h2>
+            <section class="teacher-brief">
+              <div class="image">
+                <video
+                  src="assets/images/teacher-video.mp4"
+                  controls
+                  controlsList="nodownload"
+                  poster="assets/images/teacher-info.webp"
+                ></video>
+              </div>
+              <div class="content">
+                <h3 class="heading">نبذة عن المعلم</h3>
+                <p class="description">
+                  إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى
+                  زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء
+                  لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص.
+                  حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية
+                  لتصميم الموقع. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك
+                  مولد النص العربى زيادة عدد الفقرات كما تريد. النص لن يبدو
+                  مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي
+                  المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن
+                  يطلع على صورة حقيقية لتصميم الموقع.
+                </p>
+                <h3 class="heading">معلومات مهنية</h3>
+                <p class="imprtant-info">
+                  <i class="fa-regular fa-star"></i
+                  ><span>خبرة اكثر من 14 عام في مجال التعليم</span>
+                </p>
+              </div>
+            </section>
+          </article>
+        </div>
+      </section>
+      <!-- End teacher brief section -->
+      <!-- Start teacher lessons section-->
+      <section class="main-space mb-0">
+        <div class="container-lg">
+          <section class="filter-lessons">
+            <h2 class="second-heading">
+              <span>المواد الدراسية</span
+              ><span class="icon">
+                <img src="assets/images/icons/book-icon.svg" alt="pen icon"
+              /></span>
+            </h2>
+            <ul class="filter-header">
+              <li>
+                <button class="filter-item active" type="button">
+                  الكمياء
+                </button>
+              </li>
+              <li>
+                <button class="filter-item" type="button">الفيزياء</button>
+              </li>
+              <li>
+                <button class="filter-item" type="button">علوم</button>
+              </li>
+            </ul>
+            <article class="swiper lessons-slider">
+              <div class="swiper-wrapper">
+                <section class="lesson-section swiper-slide">
+                  <article class="box">
+                    <section class="image">
+                      <img
+                        src="assets/images/lesson-image.webp"
+                        alt="اساسيات المعادلات الكميائية"
+                      />
+                    </section>
+                    <div class="box-between">
+                      <section class="content">
+                        <span class="lesson-badge free">مجانا</span>
+                        <h5 class="section">الوحدة الاولي - الفصل الاول</h5>
+                        <h3 class="heading">
+                          الدرس الاول : اساسيات المعادلات الكميائية
+                        </h3>
+                      </section>
+                      <a class="lesson-action" href="/lesson.html"
+                        >مشاهدة الحصة</a
+                      >
+                    </div>
+                  </article>
+                </section>
+                <section class="lesson-section swiper-slide">
+                  <article class="box">
+                    <section class="image">
+                      <img
+                        src="assets/images/lesson-image.webp"
+                        alt="اساسيات المعادلات الكميائية"
+                      />
+                    </section>
+                    <div class="box-between">
+                      <section class="content">
+                        <span class="lesson-badge">20 / جنيها مصريا</span>
+                        <h5 class="section">الوحدة الاولي - الفصل الاول</h5>
+                        <h3 class="heading">
+                          الدرس الثاني : اساسيات المعادلات الكميائية
+                        </h3>
+                      </section>
+                      <a class="lesson-action" href="/registration/sign-in.html"
+                        ><span>شراء الحصة</span
+                        ><svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.8458 9.02185C3.24868 7.00746 3.45012 6.00027 4.11572 5.35158C4.23874 5.23168 4.37183 5.12257 4.51352 5.02546C5.28016 4.5 6.30729 4.5 8.36157 4.5H9.63877C11.693 4.5 12.7202 4.5 13.4868 5.02546C13.6285 5.12257 13.7616 5.23168 13.8846 5.35158C14.5502 6.00027 14.7517 7.00746 15.1545 9.02185C15.7329 11.9139 16.0221 13.3599 15.3564 14.3845C15.2359 14.57 15.0952 14.7416 14.9369 14.8962C14.0627 15.75 12.5881 15.75 9.63877 15.75H8.36157C5.41229 15.75 3.93765 15.75 3.06347 14.8962C2.90519 14.7416 2.76449 14.57 2.64395 14.3845C1.9782 13.3599 2.2674 11.9139 2.8458 9.02185Z"
+                            stroke="#040349"
+                          />
+                          <path
+                            d="M6.75 4.5V3.75C6.75 2.50736 7.75736 1.5 9 1.5C10.2426 1.5 11.25 2.50736 11.25 3.75V4.5"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M6.87793 11.25C7.18681 12.1239 8.02024 12.75 8.9999 12.75C9.97956 12.75 10.813 12.1239 11.1219 11.25"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          /></svg
+                      ></a>
+                    </div>
+                  </article>
+                </section>
+                <section class="lesson-section swiper-slide">
+                  <article class="box">
+                    <section class="image">
+                      <img
+                        src="assets/images/lesson-image.webp"
+                        alt="اساسيات المعادلات الكميائية"
+                      />
+                    </section>
+                    <div class="box-between">
+                      <section class="content">
+                        <span class="lesson-badge">20 / جنيها مصريا</span>
+                        <h5 class="section">الوحدة الاولي - الفصل الاول</h5>
+                        <h3 class="heading">
+                          الدرس الثاني : اساسيات المعادلات الكميائية
+                        </h3>
+                      </section>
+                      <a class="lesson-action" href="/registration/sign-in.html"
+                        ><span>شراء الحصة</span
+                        ><svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.8458 9.02185C3.24868 7.00746 3.45012 6.00027 4.11572 5.35158C4.23874 5.23168 4.37183 5.12257 4.51352 5.02546C5.28016 4.5 6.30729 4.5 8.36157 4.5H9.63877C11.693 4.5 12.7202 4.5 13.4868 5.02546C13.6285 5.12257 13.7616 5.23168 13.8846 5.35158C14.5502 6.00027 14.7517 7.00746 15.1545 9.02185C15.7329 11.9139 16.0221 13.3599 15.3564 14.3845C15.2359 14.57 15.0952 14.7416 14.9369 14.8962C14.0627 15.75 12.5881 15.75 9.63877 15.75H8.36157C5.41229 15.75 3.93765 15.75 3.06347 14.8962C2.90519 14.7416 2.76449 14.57 2.64395 14.3845C1.9782 13.3599 2.2674 11.9139 2.8458 9.02185Z"
+                            stroke="#040349"
+                          />
+                          <path
+                            d="M6.75 4.5V3.75C6.75 2.50736 7.75736 1.5 9 1.5C10.2426 1.5 11.25 2.50736 11.25 3.75V4.5"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M6.87793 11.25C7.18681 12.1239 8.02024 12.75 8.9999 12.75C9.97956 12.75 10.813 12.1239 11.1219 11.25"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          /></svg
+                      ></a>
+                    </div>
+                  </article>
+                </section>
+                <section class="lesson-section swiper-slide">
+                  <article class="box">
+                    <section class="image">
+                      <img
+                        src="assets/images/lesson-image.webp"
+                        alt="اساسيات المعادلات الكميائية"
+                      />
+                    </section>
+                    <div class="box-between">
+                      <section class="content">
+                        <span class="lesson-badge">20 / جنيها مصريا</span>
+                        <h5 class="section">الوحدة الاولي - الفصل الاول</h5>
+                        <h3 class="heading">
+                          الدرس الثاني : اساسيات المعادلات الكميائية
+                        </h3>
+                      </section>
+                      <a class="lesson-action" href="/registration/sign-in.html"
+                        ><span>شراء الحصة</span
+                        ><svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.8458 9.02185C3.24868 7.00746 3.45012 6.00027 4.11572 5.35158C4.23874 5.23168 4.37183 5.12257 4.51352 5.02546C5.28016 4.5 6.30729 4.5 8.36157 4.5H9.63877C11.693 4.5 12.7202 4.5 13.4868 5.02546C13.6285 5.12257 13.7616 5.23168 13.8846 5.35158C14.5502 6.00027 14.7517 7.00746 15.1545 9.02185C15.7329 11.9139 16.0221 13.3599 15.3564 14.3845C15.2359 14.57 15.0952 14.7416 14.9369 14.8962C14.0627 15.75 12.5881 15.75 9.63877 15.75H8.36157C5.41229 15.75 3.93765 15.75 3.06347 14.8962C2.90519 14.7416 2.76449 14.57 2.64395 14.3845C1.9782 13.3599 2.2674 11.9139 2.8458 9.02185Z"
+                            stroke="#040349"
+                          />
+                          <path
+                            d="M6.75 4.5V3.75C6.75 2.50736 7.75736 1.5 9 1.5C10.2426 1.5 11.25 2.50736 11.25 3.75V4.5"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M6.87793 11.25C7.18681 12.1239 8.02024 12.75 8.9999 12.75C9.97956 12.75 10.813 12.1239 11.1219 11.25"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          /></svg
+                      ></a>
+                    </div>
+                  </article>
+                </section>
+                <section class="lesson-section swiper-slide">
+                  <article class="box">
+                    <section class="image">
+                      <img
+                        src="assets/images/lesson-image.webp"
+                        alt="اساسيات المعادلات الكميائية"
+                      />
+                    </section>
+                    <div class="box-between">
+                      <section class="content">
+                        <span class="lesson-badge">20 / جنيها مصريا</span>
+                        <h5 class="section">الوحدة الاولي - الفصل الاول</h5>
+                        <h3 class="heading">
+                          الدرس الثاني : اساسيات المعادلات الكميائية
+                        </h3>
+                      </section>
+                      <a class="lesson-action" href="/registration/sign-in.html"
+                        ><span>شراء الحصة</span
+                        ><svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.8458 9.02185C3.24868 7.00746 3.45012 6.00027 4.11572 5.35158C4.23874 5.23168 4.37183 5.12257 4.51352 5.02546C5.28016 4.5 6.30729 4.5 8.36157 4.5H9.63877C11.693 4.5 12.7202 4.5 13.4868 5.02546C13.6285 5.12257 13.7616 5.23168 13.8846 5.35158C14.5502 6.00027 14.7517 7.00746 15.1545 9.02185C15.7329 11.9139 16.0221 13.3599 15.3564 14.3845C15.2359 14.57 15.0952 14.7416 14.9369 14.8962C14.0627 15.75 12.5881 15.75 9.63877 15.75H8.36157C5.41229 15.75 3.93765 15.75 3.06347 14.8962C2.90519 14.7416 2.76449 14.57 2.64395 14.3845C1.9782 13.3599 2.2674 11.9139 2.8458 9.02185Z"
+                            stroke="#040349"
+                          />
+                          <path
+                            d="M6.75 4.5V3.75C6.75 2.50736 7.75736 1.5 9 1.5C10.2426 1.5 11.25 2.50736 11.25 3.75V4.5"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M6.87793 11.25C7.18681 12.1239 8.02024 12.75 8.9999 12.75C9.97956 12.75 10.813 12.1239 11.1219 11.25"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          /></svg
+                      ></a>
+                    </div>
+                  </article>
+                </section>
+                <section class="lesson-section swiper-slide">
+                  <article class="box">
+                    <section class="image">
+                      <img
+                        src="assets/images/lesson-image.webp"
+                        alt="اساسيات المعادلات الكميائية"
+                      />
+                    </section>
+                    <div class="box-between">
+                      <section class="content">
+                        <span class="lesson-badge">20 / جنيها مصريا</span>
+                        <h5 class="section">الوحدة الاولي - الفصل الاول</h5>
+                        <h3 class="heading">
+                          الدرس الثاني : اساسيات المعادلات الكميائية
+                        </h3>
+                      </section>
+                      <a class="lesson-action" href="/registration/sign-in.html"
+                        ><span>شراء الحصة</span
+                        ><svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.8458 9.02185C3.24868 7.00746 3.45012 6.00027 4.11572 5.35158C4.23874 5.23168 4.37183 5.12257 4.51352 5.02546C5.28016 4.5 6.30729 4.5 8.36157 4.5H9.63877C11.693 4.5 12.7202 4.5 13.4868 5.02546C13.6285 5.12257 13.7616 5.23168 13.8846 5.35158C14.5502 6.00027 14.7517 7.00746 15.1545 9.02185C15.7329 11.9139 16.0221 13.3599 15.3564 14.3845C15.2359 14.57 15.0952 14.7416 14.9369 14.8962C14.0627 15.75 12.5881 15.75 9.63877 15.75H8.36157C5.41229 15.75 3.93765 15.75 3.06347 14.8962C2.90519 14.7416 2.76449 14.57 2.64395 14.3845C1.9782 13.3599 2.2674 11.9139 2.8458 9.02185Z"
+                            stroke="#040349"
+                          />
+                          <path
+                            d="M6.75 4.5V3.75C6.75 2.50736 7.75736 1.5 9 1.5C10.2426 1.5 11.25 2.50736 11.25 3.75V4.5"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M6.87793 11.25C7.18681 12.1239 8.02024 12.75 8.9999 12.75C9.97956 12.75 10.813 12.1239 11.1219 11.25"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          /></svg
+                      ></a>
+                    </div>
+                  </article>
+                </section>
+                <section class="lesson-section swiper-slide">
+                  <article class="box">
+                    <section class="image">
+                      <img
+                        src="assets/images/lesson-image.webp"
+                        alt="اساسيات المعادلات الكميائية"
+                      />
+                    </section>
+                    <div class="box-between">
+                      <section class="content">
+                        <span class="lesson-badge">20 / جنيها مصريا</span>
+                        <h5 class="section">الوحدة الاولي - الفصل الاول</h5>
+                        <h3 class="heading">
+                          الدرس الثاني : اساسيات المعادلات الكميائية
+                        </h3>
+                      </section>
+                      <a class="lesson-action" href="/registration/sign-in.html"
+                        ><span>شراء الحصة</span
+                        ><svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.8458 9.02185C3.24868 7.00746 3.45012 6.00027 4.11572 5.35158C4.23874 5.23168 4.37183 5.12257 4.51352 5.02546C5.28016 4.5 6.30729 4.5 8.36157 4.5H9.63877C11.693 4.5 12.7202 4.5 13.4868 5.02546C13.6285 5.12257 13.7616 5.23168 13.8846 5.35158C14.5502 6.00027 14.7517 7.00746 15.1545 9.02185C15.7329 11.9139 16.0221 13.3599 15.3564 14.3845C15.2359 14.57 15.0952 14.7416 14.9369 14.8962C14.0627 15.75 12.5881 15.75 9.63877 15.75H8.36157C5.41229 15.75 3.93765 15.75 3.06347 14.8962C2.90519 14.7416 2.76449 14.57 2.64395 14.3845C1.9782 13.3599 2.2674 11.9139 2.8458 9.02185Z"
+                            stroke="#040349"
+                          />
+                          <path
+                            d="M6.75 4.5V3.75C6.75 2.50736 7.75736 1.5 9 1.5C10.2426 1.5 11.25 2.50736 11.25 3.75V4.5"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M6.87793 11.25C7.18681 12.1239 8.02024 12.75 8.9999 12.75C9.97956 12.75 10.813 12.1239 11.1219 11.25"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          /></svg
+                      ></a>
+                    </div>
+                  </article>
+                </section>
+                <section class="lesson-section swiper-slide">
+                  <article class="box">
+                    <section class="image">
+                      <img
+                        src="assets/images/lesson-image.webp"
+                        alt="اساسيات المعادلات الكميائية"
+                      />
+                    </section>
+                    <div class="box-between">
+                      <section class="content">
+                        <span class="lesson-badge">20 / جنيها مصريا</span>
+                        <h5 class="section">الوحدة الاولي - الفصل الاول</h5>
+                        <h3 class="heading">
+                          الدرس الثاني : اساسيات المعادلات الكميائية
+                        </h3>
+                      </section>
+                      <a class="lesson-action" href="/registration/sign-in.html"
+                        ><span>شراء الحصة</span
+                        ><svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.8458 9.02185C3.24868 7.00746 3.45012 6.00027 4.11572 5.35158C4.23874 5.23168 4.37183 5.12257 4.51352 5.02546C5.28016 4.5 6.30729 4.5 8.36157 4.5H9.63877C11.693 4.5 12.7202 4.5 13.4868 5.02546C13.6285 5.12257 13.7616 5.23168 13.8846 5.35158C14.5502 6.00027 14.7517 7.00746 15.1545 9.02185C15.7329 11.9139 16.0221 13.3599 15.3564 14.3845C15.2359 14.57 15.0952 14.7416 14.9369 14.8962C14.0627 15.75 12.5881 15.75 9.63877 15.75H8.36157C5.41229 15.75 3.93765 15.75 3.06347 14.8962C2.90519 14.7416 2.76449 14.57 2.64395 14.3845C1.9782 13.3599 2.2674 11.9139 2.8458 9.02185Z"
+                            stroke="#040349"
+                          />
+                          <path
+                            d="M6.75 4.5V3.75C6.75 2.50736 7.75736 1.5 9 1.5C10.2426 1.5 11.25 2.50736 11.25 3.75V4.5"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M6.87793 11.25C7.18681 12.1239 8.02024 12.75 8.9999 12.75C9.97956 12.75 10.813 12.1239 11.1219 11.25"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          /></svg
+                      ></a>
+                    </div>
+                  </article>
+                </section>
+                <section class="lesson-section swiper-slide">
+                  <article class="box">
+                    <section class="image">
+                      <img
+                        src="assets/images/lesson-image.webp"
+                        alt="اساسيات المعادلات الكميائية"
+                      />
+                    </section>
+                    <div class="box-between">
+                      <section class="content">
+                        <span class="lesson-badge">20 / جنيها مصريا</span>
+                        <h5 class="section">الوحدة الاولي - الفصل الاول</h5>
+                        <h3 class="heading">
+                          الدرس الثاني : اساسيات المعادلات الكميائية
+                        </h3>
+                      </section>
+                      <a class="lesson-action" href="/registration/sign-in.html"
+                        ><span>شراء الحصة</span
+                        ><svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.8458 9.02185C3.24868 7.00746 3.45012 6.00027 4.11572 5.35158C4.23874 5.23168 4.37183 5.12257 4.51352 5.02546C5.28016 4.5 6.30729 4.5 8.36157 4.5H9.63877C11.693 4.5 12.7202 4.5 13.4868 5.02546C13.6285 5.12257 13.7616 5.23168 13.8846 5.35158C14.5502 6.00027 14.7517 7.00746 15.1545 9.02185C15.7329 11.9139 16.0221 13.3599 15.3564 14.3845C15.2359 14.57 15.0952 14.7416 14.9369 14.8962C14.0627 15.75 12.5881 15.75 9.63877 15.75H8.36157C5.41229 15.75 3.93765 15.75 3.06347 14.8962C2.90519 14.7416 2.76449 14.57 2.64395 14.3845C1.9782 13.3599 2.2674 11.9139 2.8458 9.02185Z"
+                            stroke="#040349"
+                          />
+                          <path
+                            d="M6.75 4.5V3.75C6.75 2.50736 7.75736 1.5 9 1.5C10.2426 1.5 11.25 2.50736 11.25 3.75V4.5"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M6.87793 11.25C7.18681 12.1239 8.02024 12.75 8.9999 12.75C9.97956 12.75 10.813 12.1239 11.1219 11.25"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          /></svg
+                      ></a>
+                    </div>
+                  </article>
+                </section>
+                <section class="lesson-section swiper-slide">
+                  <article class="box">
+                    <section class="image">
+                      <img
+                        src="assets/images/lesson-image.webp"
+                        alt="اساسيات المعادلات الكميائية"
+                      />
+                    </section>
+                    <div class="box-between">
+                      <section class="content">
+                        <span class="lesson-badge">20 / جنيها مصريا</span>
+                        <h5 class="section">الوحدة الاولي - الفصل الاول</h5>
+                        <h3 class="heading">
+                          الدرس الثاني : اساسيات المعادلات الكميائية
+                        </h3>
+                      </section>
+                      <a class="lesson-action" href="/registration/sign-in.html"
+                        ><span>شراء الحصة</span
+                        ><svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.8458 9.02185C3.24868 7.00746 3.45012 6.00027 4.11572 5.35158C4.23874 5.23168 4.37183 5.12257 4.51352 5.02546C5.28016 4.5 6.30729 4.5 8.36157 4.5H9.63877C11.693 4.5 12.7202 4.5 13.4868 5.02546C13.6285 5.12257 13.7616 5.23168 13.8846 5.35158C14.5502 6.00027 14.7517 7.00746 15.1545 9.02185C15.7329 11.9139 16.0221 13.3599 15.3564 14.3845C15.2359 14.57 15.0952 14.7416 14.9369 14.8962C14.0627 15.75 12.5881 15.75 9.63877 15.75H8.36157C5.41229 15.75 3.93765 15.75 3.06347 14.8962C2.90519 14.7416 2.76449 14.57 2.64395 14.3845C1.9782 13.3599 2.2674 11.9139 2.8458 9.02185Z"
+                            stroke="#040349"
+                          />
+                          <path
+                            d="M6.75 4.5V3.75C6.75 2.50736 7.75736 1.5 9 1.5C10.2426 1.5 11.25 2.50736 11.25 3.75V4.5"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M6.87793 11.25C7.18681 12.1239 8.02024 12.75 8.9999 12.75C9.97956 12.75 10.813 12.1239 11.1219 11.25"
+                            stroke="#040349"
+                            stroke-linecap="round"
+                          /></svg
+                      ></a>
+                    </div>
+                  </article>
+                </section>
+              </div>
+            </article>
+          </section>
+        </div>
+      </section>
+      <!-- End teacher lessons section -->
+    </div>
+    <!-- start Footer-->
+    <footer id="footer">
+      <div class="container-lg">
+        <article>
+          <figure class="image">
+            <img src="assets/images/footer-logo.webp" alt="ipluto logo" />
+          </figure>
+        </article>
+        <article>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/">الرئيسية</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="/teachers.html">المدرسين</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registration/sign-in.html">دروسي</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registration/sign-in.html">مواعيدي</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registration/sign-in.html">الملازم</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact-us.html">تواصل معنا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link lang" href="/en">
+                <img
+                  src="assets/images/icons/en-flag.svg"
+                  alt="English flag"
+                /><span>English</span></a
+              >
+            </li>
+          </ul>
+          <article class="footer-box">
+            <ul class="social-footer">
+              <li>
+                <a class="link" href="https://twitter.com/" target="_blank">
+                  <i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="link"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+            </ul>
+            <ul class="sign-buttons">
+              <li>
+                <a class="main-button" href="/registration/teacher-sign.html"
+                  >مدرس, سجل حسابك الان</a
+                >
+              </li>
+              <li>
+                <a class="second-button" href="/registration/sign-up.html"
+                  >سجل حساب جديد</a
+                >
+              </li>
+            </ul>
+            <p class="copywrite">
+              جميع الحقوق محفوظة لمنصة <a href="/"> اي-بلوتو</a> التعليمية 2023
+            </p>
+          </article>
+        </article>
+      </div>
+    </footer>
+    <!-- End Footer-->
+    <!-- Fontawesome -->
+    <script src="assets/js/all.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper js-->
+    <script src="assets/js/swiper.js"></script>
+    <!-- sweetalert2-->
+    <script src="assets/js/sweetalert2.min.js"></script>
+    <!-- jquery in order to daterangepicker-->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Custom script-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>

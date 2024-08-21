@@ -1,0 +1,59 @@
+// Start Header
+header#header(class=headerClass)
+  .container-lg
+    nav.navbar.navbar-expand-lg
+      a.navbar-brand(href=`${siteDomin}/`)
+        //- This block use to : Change loge in header
+        block headerImage
+          img(src=`${siteDomin}/assets/images/ipluto-logo.webp`)
+      a.user-info.d-lg-none(href=`${siteDomin}/student/profile-setting.html`)
+        .avater #[img(src=`${siteDomin}/assets/images/student-avatar.webp` alt="user avater")]
+        .info.d-none.d-lg-block
+          span.welcome مرحبا بك
+          h3.name محمد ياسر صلاح حسين
+          p.data الصف الثالث الثانوي ( علمي علوم ) 
+      button.navbar-toggler(type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarHeader" aria-controls="navbarHeader")
+        i.fa-solid.fa-bars
+      .offcanvas.offcanvas-start#navbarHeader
+        .offcanvas-header
+          a.navbar-brand(href=`${siteDomin}/`)
+            img(src=`${siteDomin}/assets/images/ipluto-logo.webp`)
+          button.close-button(data-bs-dismiss="offcanvas" aria-label="Close" type="button")
+            i.fa-solid.fa-xmark
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href=`${siteDomin}/` class=(page === "home" ? "active" : null)) الرئيسية
+          li.nav-item
+            a.nav-link(href=`${siteDomin}/teachers.html` class=(page === "teachers" ? "active" : null)) المدرسين
+          li.nav-item
+            a.nav-link(href=`${siteDomin}/registration/sign-in.html`) دروسي
+          li.nav-item
+            a.nav-link(href=`${siteDomin}/registration/sign-in.html`) مواعيدي
+          li.nav-item
+            a.nav-link(href=`${siteDomin}/registration/sign-in.html`) الملازم
+          li.nav-item
+            a.nav-link(href=`${siteDomin}/contact-us.html` class=(page === "contact-us" ? "active" : null)) تواصل معنا
+          li.nav-item
+            a.nav-link.lang(href=`${siteDomin}/en`) 
+              img(src=`${siteDomin}/assets/images/icons/en-flag.svg`, alt="English flag")
+              span English
+        //- ul.sign-buttons 
+        //-   li
+        //-     a.main-button(href=`${siteDomin}/registration/sign-in.html`) تسجيل الدخول
+        //-   li
+        //-     a.second-button(href=`${siteDomin}/registration/sign-up.html`) سجل حساب جديد
+        .dropdown.main-select 
+          button.user-info.d-none.d-lg-flex(type="button", data-bs-toggle="dropdown")
+            .avater #[img(src=`${siteDomin}/assets/images/student-avatar.webp` alt="user avater")]
+            .info.d-none.d-lg-block.text-start
+              span.welcome مرحبا بك
+              h3.name محمد ياسر صلاح حسين
+              p.data الصف الثالث الثانوي ( علمي علوم ) 
+          ul.dropdown-menu
+            li 
+              a.dropdown-item(href=`${siteDomin}/student/profile-setting.html`) حسابي
+            li 
+              a.dropdown-item.logout(href=`${siteDomin}/`) تسجيل الخروج
+        a.logout(href=`${siteDomin}/`).d-flex.d-lg-none.px-3.py-2 تسجيل الخروج
+          .icon #[i.fa-solid.fa-arrow-right-from-bracket.fa-rotate-180]
+// End Header 

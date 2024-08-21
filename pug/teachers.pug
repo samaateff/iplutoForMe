@@ -1,0 +1,140 @@
+extends layout
+include components/mixins
+
+append variable
+  - 
+    let page            = "teachers"
+    let pageTitle       = "اي بلوتو - المدرسين"
+
+//- content This page
+block pageContent
+  // Start teachers Header section
+  section.main-space
+    .container-lg
+      section.main-heading 
+        h4.title اختار المدرس ...
+        h1.heading مدرسين #[span.special-word متخصصين] في كافة المواد الدراسية
+  // End teachers Header section 
+  // Start main search section
+  section.main-space
+    .container-lg
+      section.main-search 
+        h2.search-heading ابحث عن مدرس محدد ...
+        form.register-form(action="")
+          .search-box
+            section.custom-select.dropdown
+              label المرحلة الدراسية
+              input#educational_level(type="hidden", name="educational_level")
+              button.input-button(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+                span اختر المرحلة الدراسية 
+                i.fa-solid.fa-chevron-down
+              ul.dropdown-menu
+                - for (let i = 1; i <= 6; i++)
+                    a.dropdown-item(data-select-value="secondary-school-2" href="#") الصف الثاني الثانوي ( علمي - علوم )
+            section.custom-select.dropdown
+              label التخصص
+              input#user_qualification(type="hidden", name="user_qualification")
+              button.input-button(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+                span اختر التخصص 
+                i.fa-solid.fa-chevron-down
+              ul.dropdown-menu
+                - for (let i = 1; i <= 6; i++)
+                    a.dropdown-item(data-select-value="secondary-school-2" href="#") بكالوريوس تربية نوعية
+            section.custom-select.dropdown
+              label المادة الدراسية
+              input#subject_teach(type="hidden", name="subject_teach")
+              button.input-button(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+                span اختر المادة الدراسية 
+                i.fa-solid.fa-chevron-down
+              ul.dropdown-menu
+                - for (let i = 1; i <= 6; i++)
+                    a.dropdown-item(data-select-value="secondary-school-2" href="#") رياضيات
+            button.submit(type="submit") بحث
+  // End main search section 
+  // Start teachers section
+  section.teachers.main-space.mb-0
+    .container-lg
+      h2.teachers-heading كل المدرسين
+      article.teachers-box
+        - for (let i = 1; i <= 5; i++)
+            section.teacher-section
+              .image(data-bs-toggle="modal" data-bs-target="#teacher_popup")
+                img(src=`${siteDomin}/assets/images/teacher-brief.webp`, alt="اسماء سعيد علي")
+              a.content(href=`${siteDomin}/teacher-profile.html`)
+                p.number-lessons 
+                  span.number 8
+                  span دروس
+                h3.name اسماء سعيد علي
+                h5.subject فيزياء
+                p.rate
+                  i.fa-regular.fa-star
+                  span 43 تقييم ايجابي
+            section.teacher-section
+              .image(data-bs-toggle="modal" data-bs-target="#teacher_popup") 
+                img(src=`${siteDomin}/assets/images/teacher-2.webp`, alt="محمد ياسر صلاح")
+              a.content(href=`${siteDomin}/teacher-profile.html`)
+                p.number-lessons 
+                  span.number 12
+                  span دروس
+                h3.name محمد ياسر صلاح
+                h5.subject لغة انجليزية
+                p.rate
+                  i.fa-regular.fa-star
+                  span 43 تقييم ايجابي
+            section.teacher-section
+              .image(data-bs-toggle="modal" data-bs-target="#teacher_popup") 
+                img(src=`${siteDomin}/assets/images/teacher-3.webp`, alt="دينا اشرف بدوي")
+              a.content(href=`${siteDomin}/teacher-profile.html`)
+                p.number-lessons 
+                  span.number 9
+                  span دروس
+                h3.name دينا اشرف بدوي
+                h5.subject لغة عربية
+                p.rate
+                  i.fa-regular.fa-star
+                  span 43 تقييم ايجابي
+            section.teacher-section
+              .image(data-bs-toggle="modal" data-bs-target="#teacher_popup") 
+                img(src=`${siteDomin}/assets/images/teacher-4.webp`, alt="شيماء ابراهيم عبدالله")
+              a.content(href=`${siteDomin}/teacher-profile.html`)
+                p.number-lessons 
+                  span.number 15
+                  span دروس
+                h3.name شيماء ابراهيم عبدالله
+                h5.subject رياضيات
+                p.rate
+                  i.fa-regular.fa-star
+                  span 43 تقييم ايجابي
+            section.teacher-section
+              .image(data-bs-toggle="modal" data-bs-target="#teacher_popup") 
+                img(src=`${siteDomin}/assets/images/teacher-5.webp`, alt="سمية محمد علي")
+              a.content(href=`${siteDomin}/teacher-profile.html`)
+                p.number-lessons 
+                  span.number 33
+                  span دروس
+                h3.name اسماء سعيد علي
+                h5.subject علوم
+                p.rate
+                  i.fa-regular.fa-star
+                  span 43 تقييم ايجابي
+  // End teachers section 
+  // Modal => operation success
+  section.teacher-popup#teacher_popup.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          article.teacher-brief
+            section.image 
+              img(src=`${siteDomin}/assets/images/teacher-brief.webp`, alt="محمد ياسر صلاح")
+            section.content 
+              h3.heading نبذة عن المعلم
+              p.description إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص. حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد. النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+              h3.heading معلومات مهنية
+              p.imprtant-info 
+                i.fa-regular.fa-star
+                span خبرة اكثر من 14 عام في مجال التعليم
+
+            

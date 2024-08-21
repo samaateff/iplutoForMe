@@ -1,0 +1,17 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "lesson-recording"
+    let pageTitle       = "المعلم - تسجيل الدرس"
+
+//- content This page
+block teacherContent
+  // Start archives heading section
+  section.teacher-heading.mb-3
+    .heading-box.flex-grow-0.flex-shrink-0
+      h2.heading.text-start مادة الرياضيات
+      p.description.text-start الصف الاول الثانوي
+    h1.heading.text-center #[span.red-color تسجيل] الدرس الثاني - العلاقات وتمثيلها بيانيا
+  // End archives heading section

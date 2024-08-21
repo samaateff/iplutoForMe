@@ -1,0 +1,87 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "teacher-profile"
+    let pageTitle       = "الطالب - المعلم احمد كمال"
+
+
+//- content This page
+block studentContent
+  // Start teacher info section
+  section.teacher-info.flex-column.text-center
+    section.image 
+      img(src=`${siteDomin}/assets/images/teacher-info.webp`, alt="سيف دياب محمدي")
+    section.content 
+      h1.name.mb-0 أ. سيف دياب محمدي
+      h4.heading معلم اول
+      article.info-box 
+        section.info
+          .icon #[img(src=`${siteDomin}/assets/images/icons/book.svg` alt="icon")]
+          h3.info-heading مادة الفيزياء, كمياء
+        section.info 
+          .icon  #[img(src=`${siteDomin}/assets/images/icons/video-circle.svg` alt="icon")]
+          h3.info-heading عدد الدروس ( #[span.special 22] )
+        section.info 
+          .rate.justify-content-center
+            i.fa-solid.fa-star
+            i.fa-solid.fa-star
+            i.fa-solid.fa-star
+            i.fa-solid.fa-star
+            i.fa-regular.fa-star
+          h3.info-heading ( #[span.special 34] ) تقييم ايجابي
+        section.info 
+          a.add-rate(href="#rate_popup", data-bs-toggle="modal") اضافة تقييم
+  // End teacher info section
+  // Start teacher brief section
+  section.teacher-resume.shadow-none
+    h2.second-heading.mb-0
+      span السيرة الذاتية
+      span.icon  #[img(src=`${siteDomin}/assets/images/icons/edit-pen.svg` alt="pen icon")]
+    section.teacher-brief.student
+      .image 
+        video(src=`${siteDomin}/assets/images/teacher-video.mp4` controls poster=`${siteDomin}/assets/images/teacher-info.webp`) 
+      .content
+        h3.heading نبذة عن المعلم
+        p.description إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص. حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد. النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+        h3.heading معلومات مهنية
+        p.imprtant-info 
+          i.fa-regular.fa-star
+          span خبرة اكثر من 14 عام في مجال التعليم
+  // End teacher brief section 
+  // Modal => operation success
+  section.main-popup#rate_popup.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          section.register-heading
+            h3.heading اضافة تقييم
+            p.description قم باضافة تقييم للمعلم
+          form.register-form.needs-validation(action="", novalidate)
+            .rate-field
+              input.rate-value#rate_value(type="hidden", name="rate_value")
+              .icon(data-rate="1") #[i.fa-regular.fa-star]
+              .icon(data-rate="2") #[i.fa-regular.fa-star]
+              .icon(data-rate="3") #[i.fa-regular.fa-star]
+              .icon(data-rate="4") #[i.fa-regular.fa-star]
+              .icon(data-rate="5") #[i.fa-regular.fa-star]
+            // button.submit(type="submit") دخول
+            button.submit(type="button" data-bs-toggle="modal" data-bs-target="#success_popup") اضافة
+  // Modal => operation success
+  section.main-popup#success_popup.modal.fade(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        section.modal-header
+          button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            i.fa-solid.fa-xmark
+        section.modal-body
+          section.student-popup-heading 
+            .icon #[img(src=src=`${siteDomin}/assets/images/payment-success.webp` alt="success")]
+            .heading
+              h2.mb-2 تم إضافة التقييم بنجاج
+              p.description يمكنك تصفح الدروس الخاصة بهذا المعلم
+            a.button(href=`${siteDomin}/student/teacher-material.html`) مشاهدة المادة العلمية

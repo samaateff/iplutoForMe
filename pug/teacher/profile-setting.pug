@@ -1,0 +1,68 @@
+extends layout
+include ../components/mixins
+
+append variable
+  - 
+    let page            = "profile-setting"
+    let pageTitle       = "المعلم - الحساب الشخصي"
+
+
+//- content This page
+block teacherContent
+  // Start profile heading section
+  section.profile-heading
+    .student-heading.mb-3
+      h1.heading.text-center الاعدادات
+    .student-heading 
+      h2.heading.text-center الملف الشخصي #[span.welcome مرحبا بك سعيد]
+  // End profile heading section
+  block profileContent
+    // Start profile info section
+    section.profile-info
+      ul.student-option.mt-0
+        li 
+          article.user-avatar.text-center  
+            img#profile_image(src=`${siteDomin}/assets/images/teacher-info.webp` alt="user avater")
+            .change-image 
+              label(for="profile_image_input")
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.3332 10.0003C18.3332 13.9287 18.3332 15.8929 17.1128 17.1133C15.8924 18.3337 13.9282 18.3337 9.99984 18.3337C6.07147 18.3337 4.10728 18.3337 2.88689 17.1133C1.6665 15.8929 1.6665 13.9287 1.6665 10.0003C1.6665 6.07195 1.6665 4.10777 2.88689 2.88738C4.10728 1.66699 6.07147 1.66699 9.99984 1.66699" stroke="#040349" stroke-linecap="round"/><path d="M1.6665 10.4165L3.12616 9.13927C3.88555 8.47481 5.03007 8.51292 5.74357 9.22642L9.31835 12.8012C9.89104 13.3739 10.7925 13.452 11.4552 12.9863L11.7037 12.8116C12.6572 12.1415 13.9473 12.2192 14.8136 12.9988L17.4998 15.4165" stroke="#040349" stroke-linecap="round"/><path d="M14.1665 1.66699V9.16699M14.1665 1.66699L16.6665 4.16699M14.1665 1.66699L11.6665 4.16699" stroke="#040349" stroke-linecap="round" stroke-linejoin="round"/></svg> 
+              input#profile_image_input(type="file", name="profile_image_input", accept="image/*")
+        li 
+          a.profile-link(href=`${siteDomin}/teacher/profile-name.html`) 
+            .box 
+              h3.heading الاسم بالكامل
+              p.data محمد ياسر صلاح حسين
+            span.arrow #[i.fa-solid.fa-chevron-left]
+        li 
+          a.profile-link(href=`${siteDomin}/teacher/profile-email.html`) 
+            .box 
+              h3.heading البريد الالكتروني
+              p.data mail@mailto.com
+            span.arrow #[i.fa-solid.fa-chevron-left]
+        li 
+          a.profile-link(href=`${siteDomin}/teacher/profile-school-level.html`) 
+            .box 
+              h3.heading المراحل الدراسية
+              p.data الصف الاول الثانوي, الصف الثاني الثانوي
+            span.arrow #[i.fa-solid.fa-chevron-left]
+        li 
+          a.profile-link(href=`${siteDomin}/teacher/profile-subjects.html`) 
+            .box 
+              h3.heading المواد الدراسية
+              p.data الرياضيات, الاحصاء
+            span.arrow #[i.fa-solid.fa-chevron-left]
+        li 
+          a.profile-link(href=`${siteDomin}/teacher/profile-phone.html`) 
+            .box 
+              h3.heading رقم الهاتف
+              p.data 01115514107
+                span.icon.check #[i.fa-solid.fa-check]
+            span.arrow #[i.fa-solid.fa-chevron-left]
+        li 
+          a.profile-link(href=`${siteDomin}/teacher/profile-password.html`) 
+            .box 
+              h3.heading كلمة المرور
+              p.data ********
+                span.icon.pass #[i.fa-regular.fa-eye]
+            span.arrow #[i.fa-solid.fa-chevron-left]
+    // End profile info section
